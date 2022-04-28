@@ -112,6 +112,8 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
+    /*java로 색상 바꿔야하는 부분*/
+    color: white;
 }
 
 .nav__logo{
@@ -159,6 +161,19 @@
   position: relative;
 }
 
+/*글자 white*/
+.home__title, .home__description,
+.slider__number a{
+  color: var(--color-white);
+}
+
+/*home main img*/
+#home ul li:first-child{
+  background: no-repeat url(img/home01.jpg);
+}
+
+
+
 /*li display:none으로 자바 만들예정*/
 #home ul li:first-child+li{
   display: none;
@@ -171,8 +186,19 @@
 .slider__controler{
   outline: 1px solid red;
   position: absolute;
-  top: 500px;
-  left: 50%;
+  top: 530px;
+  left: 40%;
+}
+
+.slider__move{
+  width: 146px;
+  height: 1px;
+  background-color: yellowgreen;
+}
+.slider__bar{
+  width: 440px;
+  height: 2px;
+  background-color: #7c7979;
 }
 
 /*display*/
@@ -231,13 +257,13 @@
   justify-content: center;
   padding-top: 30px;
 }
-.item__01{
+.item{
   outline: 1px solid red;
   max-width: 1160px;
   width: 100%;
 }
 
-.item__01 img{
+.item img{
   display: inline-block;
   outline: 1px solid blue;
   width: 100%;
@@ -246,26 +272,26 @@
   line-height: 312px;
 }
 
-.item__01 p{
+.item p{
   text-align: center;
   padding-top: 30px;
   outline: 1px solid yellow;
 }
 
 /*자세히보기 버튼 위치*/
-.item__01 div{
+.item div{
   margin: 0 auto;
   /*가운데 정렬 방법*/
   margin-top: 44px;
 }
 
-.item__02{
+.item__container div:first-child+div{
   display: none;
 }
-.item__03{
+.item__container div:first-child+div+div{
   display: none;
 }
-.item__04{
+.item__container div:first-child+div+div+div{
   display: none;
 }
 
@@ -330,6 +356,23 @@
   line-height: 261px;
 }
 
+/*good sticker*/
+.solution__container li:nth-child(2){
+  position: relative;
+}
+.solution__container li:nth-child(2)::after{
+  content: "";
+  display: block;
+  width: 82px;
+  height: 82px;
+  background-image: url(../Mediaspine_Website/img/good.png);
+  position: absolute;
+  top: -40px;
+  right: 0px;
+  outline: 1px solid;
+}
+
+/*solution font*/
 .solution__font{
   margin: 0 auto;
   outline: 1px solid yellow;
@@ -350,16 +393,21 @@
 #contents{
   height: 1080px;
   outline: 1px solid red;
-  max-width: 1400px;
   margin: 0 auto;
+  max-width: 1400px;
+}
+
+.contents__container{
+  outline: 1px solid salmon;
   display: flex;
   align-items: center;
+  padding-top: 200px;
 }
 .contents__title{
   width: 300px;
   margin-right: 80px;
 }
-.contents__container{
+.gallery__container{
   outline: 1px solid red;
   display: flex;
   width: 100%;
@@ -378,7 +426,7 @@
 .gallery img{
   display: inline-block;
   outline: 1px solid red;
-  height: 420px;
+  height: 380px;
   width: 100%;
   text-align: center;
   line-height: 420px;
@@ -402,6 +450,67 @@
 
 .gallery__controler{
   outline: 1px solid blue;
+  margin-top: 60px;
+  margin-left: 30%;
+}
+
+.gallery__btn{
+  outline: 1px solid red;
+  position: relative;
+}
+.before__btn{
+  outline: 1px solid blue;
+  width: 24px;
+  height: 24px;
+  background-image:url(../Mediaspine_Website/img/before_btn.png);
+}
+.before__btn em{
+  display: none;
+}
+
+.after__btn{
+  outline: 1px solid blue;
+  margin-left: 94%;
+  width: 24px;
+  height: 24px;
+  background-image:url(../Mediaspine_Website/img/after_btn.png);
+}
+.after__btn em{
+  display: none;
+}
+
+/*숫자 부분*/
+.gallery__number{
+  outline: 1px solid yellow;
+  position: absolute;
+  top: 4px;
+  left: 40px;
+  width: 92%;
+}
+.first__number{
+  outline: 1px solid salmon;
+  margin-right: 95%;
+}
+.last__number{
+  outline: 1px solid salmon;
+}
+
+/*gallery bar*/
+.gallery__move{
+  position: absolute;
+  top: 12px;
+  left: 10%;
+  width: 20%;
+  height: 2px;
+  background-color: yellowgreen;
+}
+.gallery__bar{
+  position: absolute;
+  top: 12px;
+  left: 10%;
+  width: 77%;
+  height: 2px;
+  background-color: #7c7979;
 }
 
 
@@ -452,6 +561,12 @@
   line-height: 140px;
   margin-bottom: 3px;
   position: relative;
+  background-color: #eaf3ff;
+}
+
+.active{
+  background-color: #3086f6;
+  color: white;
 }
 
 .active::before{
@@ -463,6 +578,7 @@
   position: absolute;
   top: 40%;
   left: 10%;
+  background: no-repeat url(../Mediaspine_Website/img/check_btn.png);
 }
 
 .system__right{
@@ -495,6 +611,7 @@
   height: 283px;
   text-align: center;
   line-height: 283px;
+  width: 100%;
 }
 
 .right__item__content{
@@ -534,27 +651,124 @@
 .reference__item{
   outline: 1px solid yellowgreen;
   height: 400px;
-  flex-grow: 1;
   margin: 0 3px;
+  width: 100%;
 }
 
 .reference__item__title{
   outline: 1px solid pink;
   padding-top: 300px;
   padding-left: 10px;
+  color: white;
 }
 .reference__item__description{
   outline : 1px solid palegoldenrod ;
   padding-top: 10px;
   padding-left: 10px;
+  color: white;
 }
 
+/*reference__img*/
+
+.reference__container div:nth-child(1){
+  background-color: #bdbdbd;
+}
+.reference__container div:nth-child(2){
+  background: no-repeat url(../Mediaspine_Website/img/reference01.jpg); 
+}
+.reference__container div:nth-child(3){
+  background: no-repeat url(../Mediaspine_Website/img/reference02.jpg); 
+}
+.reference__container div:nth-child(4){
+  background: no-repeat url(../Mediaspine_Website/img/reference03.jpg); 
+}
+.reference__container div:nth-child(5){
+  background: no-repeat url(../Mediaspine_Website/img/reference04.jpg); 
+}
+.reference__container div:nth-child(6){
+  background: no-repeat url(../Mediaspine_Website/img/reference05.jpg); 
+}
+.reference__container div:nth-child(7){
+  background-color: #73aace;
+}
+.reference__container div:nth-child(8){
+  background-color: #bdbdbd;
+}
+
+
+
+
+
+/*controler*/
 .reference__controler{
   outline: 1px solid var(--color-blue);
   width: 1050px;
   margin: 0 auto;
   margin-top: 70px;
 }
+
+
+.reference__btn{
+  outline: 1px solid red;
+  position: relative;
+}
+.before__btn2{
+  outline: 1px solid blue;
+  width: 24px;
+  height: 24px;
+  background-image:url(../Mediaspine_Website/img/before_btn.png);
+}
+.before__btn2 em{
+  display: none;
+}
+
+.after__btn2{
+  outline: 1px solid blue;
+  margin-left: 94%;
+  width: 24px;
+  height: 24px;
+  background-image:url(../Mediaspine_Website/img/after_btn.png);
+}
+.after__btn2 em{
+  display: none;
+}
+
+/*숫자 부분*/
+.reference__number{
+  outline: 1px solid yellow;
+  position: absolute;
+  top: 4px;
+  left: 40px;
+  width: 92%;
+}
+.first__number2{
+  outline: 1px solid salmon;
+  margin-right: 95%;
+}
+.last__number2{
+  outline: 1px solid salmon;
+}
+
+/*reference bar*/
+.reference__move{
+  position: absolute;
+  top: 12px;
+  left: 10%;
+  width: 20%;
+  height: 2px;
+  background-color: yellowgreen;
+}
+.reference__bar{
+  position: absolute;
+  top: 12px;
+  left: 10%;
+  width: 77%;
+  height: 2px;
+  background-color: #7c7979;
+}
+
+
+
 
 /*contact*/
 #contact{
@@ -623,7 +837,6 @@
   padding-top: 15px;
 }
 
-
 .footer__right{
   flex-basis: 15%;
   outline: 1px solid wheat;
@@ -632,3 +845,5 @@
 #footer p{
   color: white;
 }
+
+

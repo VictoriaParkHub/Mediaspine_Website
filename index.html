@@ -31,7 +31,7 @@
                 <li class="nav__menu__item">솔루션</li>
                 <li class="nav__menu__item">시스템 구축</li>
                 <li class="nav__menu__item">회사소개</li>
-                <li class="nav__menu__item active">문의하기</li>
+                <li class="nav__menu__item">문의하기</li>
             </ul>
         </div>
     </nav>
@@ -82,6 +82,8 @@
                 <a href="#">02</a>
                 <a href="#">03</a>
             </div>
+            <div class="slider__bar"></div>
+            <div class="slider__move"></div>
         </div>
     </section>
 
@@ -98,32 +100,43 @@
             <ul>
                 <li>
                     <div>
-                        <img src="" alt="일대일 운영관리">
+                        <img src="img/displayicon01.png" alt="일대일 운영관리">
                         <h2 class="slider__title">일대일 운영관리</h2>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <img src="" alt="맞춤형 콘텐츠">
+                        <img src="img/displayicon02.png" alt="맞춤형 콘텐츠">
                         <h2 class="slider__title">맞춤형 콘텐츠</h2>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <img src="" alt="모니터링 서비스">
+                        <img src="img/displayicon03.png" alt="모니터링 서비스">
                         <h2 class="slider__title">모니터링 서비스</h2>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <img src="" alt="디바이스 원격지원">
+                        <img src="img/displayicon04.png" alt="디바이스 원격지원">
                         <h2 class="slider__title">디바이스 원격지원</h2>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="item__container">
-            <div class="item__01">
+            <div class="item">
+                <img src="img/display01.jpg" alt="일대일 운영관리 이미지">
+                <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
+                <div class="more__btn">
+                    <a href="#"
+                    data-title="일대일 운영관리 자세히보기"
+                    title="레이어 팝업 열림">
+                        <span>자세히보기</span>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
                 <img src="" alt="일대일 운영관리 이미지">
                 <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
                 <div class="more__btn">
@@ -134,7 +147,7 @@
                     </a>
                 </div>
             </div>
-            <div class="item__02">
+            <div class="item">
                 <img src="" alt="일대일 운영관리 이미지">
                 <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
                 <div class="more__btn">
@@ -145,18 +158,7 @@
                     </a>
                 </div>
             </div>
-            <div class="item__03">
-                <img src="" alt="일대일 운영관리 이미지">
-                <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
-                <div class="more__btn">
-                    <a href="#"
-                    data-title="일대일 운영관리 자세히보기"
-                    title="레이어 팝업 열림">
-                        <span>자세히보기</span>
-                    </a>
-                </div>
-            </div>
-            <div class="item__04">
+            <div class="item">
                 <img src="" alt="일대일 운영관리 이미지">
                 <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
                 <div class="more__btn">
@@ -175,7 +177,7 @@
         <h1 class="solution__title">쉽고 간편한 고객맞춤 솔루션</h1>
             <ul class="solution__container">
                 <li>
-                    <img src="" alt="DID Plus Local">
+                    <img src="img/Solution01.jpg" alt="DID Plus Local">
                     <div class="solution__font">
                         <h2 class="container__title">DID PLUS</h2>
                         <p class="container__description">
@@ -192,7 +194,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="" alt="DID Plus Web">
+                    <img src="img/Solution02.jpg" alt="DID Plus Web">
                     <div class="solution__font">
                         <h2 class="container__title">DID PLUS</h2>
                         <p class="container__description">
@@ -209,7 +211,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="" alt="DID plus">
+                    <img src="img/Solution03.jpg" alt="DID plus">
                     <div class="solution__font">
                         <h2 class="container__title">MEET PLUS</h2>
                         <p class="container__description">
@@ -230,77 +232,75 @@
 
     <!--Contents-->
     <section id="contents">
-        <h1 class="contents__title">
-            시선을 끄는<br />
-            다양한 콘텐츠
-        </h1>
         <div class="contents__container">
-            <div class="gallery">
-                <img src="" alt="뉴스 이미지">
-                <h2 class="gallery__title">뉴스</h2>
-                <p class="gallery__description">
-                    전문기관과 연결해 신속하고<br />
-                    정확한 정보를 제공합니다.
-                </p>
-                <div class="more__btn">
-                    <a href="#"
-                    data-title="뉴스 콘텐츠 자세히보기"
-                    title="레이어 팝업 열림">
-                        <span>자세히보기</span>
-                    </a>
+            <h1 class="contents__title">
+                시선을 끄는<br />
+                다양한 콘텐츠
+            </h1>
+            <div class="gallery__container">
+                <div class="gallery">
+                    <img src="img/content01.png" alt="뉴스 이미지">
+                    <h2 class="gallery__title">뉴스</h2>
+                    <p class="gallery__description">
+                        전문기관과 연결해 신속하고<br />
+                        정확한 정보를 제공합니다.
+                    </p>
+                    <div class="more__btn">
+                        <a href="#"
+                        data-title="뉴스 콘텐츠 자세히보기"
+                        title="레이어 팝업 열림">
+                            <span>자세히보기</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery">
-                <img src="" alt="날씨 이미지">
-                <h2 class="gallery__title">날씨</h2>
-                <p class="gallery__description">
-                    일자별 날씨와 미세먼지<br />
-                    정보를 제공합니다.
-                </p>
-                <div class="more__btn">
-                    <a href="#"
-                    data-title="날씨 콘텐츠 자세히보기"
-                    title="레이어 팝업 열림">
-                        <span>자세히보기</span>
-                    </a>
+                <div class="gallery">
+                    <img src="img/content02.png" alt="날씨 이미지">
+                    <h2 class="gallery__title">날씨</h2>
+                    <p class="gallery__description">
+                        일자별 날씨와 미세먼지<br />
+                        정보를 제공합니다.
+                    </p>
+                    <div class="more__btn">
+                        <a href="#"
+                        data-title="날씨 콘텐츠 자세히보기"
+                        title="레이어 팝업 열림">
+                            <span>자세히보기</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery">
-                <img src="" alt="경제 이미지">
-                <h2 class="gallery__title">경제</h2>
-                <p class="gallery__description">
-                    국내증시와 관련된 경제, 금융<br />
-                    정보들을 제공합니다.
-                </p>
-                <div class="more__btn">
-                    <a href="#"
-                    data-title="경제 콘텐츠 자세히보기"
-                    title="레이어 팝업 열림">
-                        <span>자세히보기</span>
-                    </a>
+                <div class="gallery">
+                    <img src="img/content03.png" alt="경제 이미지">
+                    <h2 class="gallery__title">경제</h2>
+                    <p class="gallery__description">
+                        국내증시와 관련된 경제, 금융<br />
+                        정보들을 제공합니다.
+                    </p>
+                    <div class="more__btn">
+                        <a href="#"
+                        data-title="경제 콘텐츠 자세히보기"
+                        title="레이어 팝업 열림">
+                            <span>자세히보기</span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery last">
-                <img src="" alt="생활정보 이미지">
-                <h2 class="gallery__title">생활정보</h2>
-                <p class="gallery__description">
-                    일상생활에 밀접해있는 유익한<br />
-                    정보들을 제공합니다.
-                </p>
-                <div class="more__btn">
-                    <a href="#"
-                    data-title="생활정보 콘텐츠 자세히보기"
-                    title="레이어 팝업 열림">
-                        <span>자세히보기</span>
-                    </a>
+                <div class="gallery last">
+                    <img src="img/content04.png" alt="생활정보 이미지">
+                    <h2 class="gallery__title">생활정보</h2>
+                    <p class="gallery__description">
+                        일상생활에 밀접해있는 유익한<br />
+                        정보들을 제공합니다.
+                    </p>
+                    <div class="more__btn">
+                        <a href="#"
+                        data-title="생활정보 콘텐츠 자세히보기"
+                        title="레이어 팝업 열림">
+                            <span>자세히보기</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="gallery__controler">
-            <div class="gallery__number">
-                <a href="#">01</a>
-                <a href="#">04</a>
-            </div>
             <div class="gallery__btn">
                 <button class="before__btn">
                     <em class="behind">이전</em>
@@ -308,6 +308,12 @@
                 <button class="after__btn">
                     <em class="behind">이후</em>
                 </button>
+                <div class="gallery__number">
+                    <a href="#" class="first__number">01</a>
+                    <a href="#" class="last__number">04</a>
+                </div>
+                <div class="gallery__bar"></div>
+                <div class="gallery__move"></div>
             </div>
         </div>
     </section>
@@ -329,7 +335,7 @@
             </div>
             <div class="system__right">
                 <div class="right__item">
-                    <img src="" alt="빌딩안내 이미지">
+                    <img src="img/system01.jpg" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
                         <p class="right__description">
@@ -405,50 +411,44 @@
         <h1 class="reference__title">신뢰있는 구축사례</h1>
         <div class="reference__container">
             <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
             </div>
             <div class="reference__item">
                 <h2 class="reference__item__title">멀티비전</h2>
                 <p class="reference__item__description">대교</p>
             </div>
             <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
+                <h2 class="reference__item__title">빌딩안내</h2>
+                <p class="reference__item__description">센트로폴리스</p>
+            </div>
+            <div class="reference__item">
+                <h2 class="reference__item__title">에너지현황</h2>
+                <p class="reference__item__description">한국전력</p>
+            </div>
+            <div class="reference__item">
+                <h2 class="reference__item__title">통합모니터링</h2>
+                <p class="reference__item__description">SC제일은행</p>
             </div>
             <div class="reference__item">
                 <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
+                <p class="reference__item__description">경기광주역</p>
             </div>
             <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
             </div>
         </div>
         <div class="reference__controler">
-            <div class="reference__number">
-                <a href="#">01</a>
-                <a href="#">04</a>
-            </div>
             <div class="reference__btn">
-                <button class="before__btn">
+                <button class="before__btn2">
                     <em class="behind">이전</em>
                 </button>
-                <button class="after__btn">
+                <button class="after__btn2">
                     <em class="behind">이후</em>
                 </button>
+                <div class="reference__number">
+                    <a href="#" class="first__number2">01</a>
+                    <a href="#" class="last__number2">04</a>
+                </div>
+                <div class="reference__bar"></div>
+                <div class="reference__move"></div>
             </div>
         </div>
     </section>
@@ -456,7 +456,7 @@
     <!--contact-->
     <section id="contact">
         <div class="contact__container">
-            <img src="" alt="문의하세요 이미지">
+            <img src="img/contact.jpg" alt="문의하세요 이미지">
             <div class="contact__right">
                 <h1 class="contact__title">무엇이든 물어보세요.</h1>
                 <p class="contact__description">

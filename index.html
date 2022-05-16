@@ -100,32 +100,48 @@
             <ul>
                 <li>
                     <div>
-                        <img src="img/displayicon01.png" alt="일대일 운영관리">
-                        <h2 class="slider__title">일대일 운영관리</h2>
+                        <button 
+                            id="displayicon01"
+                            title="일대일 운영관리 버튼"></button>
+                        <h2 
+                            id="h2title01"
+                            class="slider__title h2active">일대일 운영관리</h2>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <img src="img/displayicon02.png" alt="맞춤형 콘텐츠">
-                        <h2 class="slider__title">맞춤형 콘텐츠</h2>
+                        <button 
+                            id="displayicon02"
+                            title="맞춤형 콘텐츠 버튼"></button>
+                        <h2 
+                            id="h2title02"
+                            class="slider__title">맞춤형 콘텐츠</h2>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <img src="img/displayicon03.png" alt="모니터링 서비스">
-                        <h2 class="slider__title">모니터링 서비스</h2>
+                        <button 
+                            id="displayicon03"
+                            title="모니터링 서비스 버튼"></button>
+                        <h2 
+                            id="h2title03"
+                            class="slider__title">모니터링 서비스</h2>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <img src="img/displayicon04.png" alt="디바이스 원격지원">
-                        <h2 class="slider__title">디바이스 원격지원</h2>
+                        <button 
+                            id="displayicon04"
+                            title="디바이스 원격지원 버튼"></button>
+                        <h2 
+                            id="h2title04"
+                            class="slider__title">디바이스 원격지원</h2>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="item__container">
-            <div class="item">
+            <div class="item oneclick">
                 <img src="img/display01.jpg" alt="일대일 운영관리 이미지">
                 <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
                 <div class="more__btn">
@@ -136,34 +152,34 @@
                     </a>
                 </div>
             </div>
-            <div class="item">
-                <img src="" alt="일대일 운영관리 이미지">
-                <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
+            <div class="item twoclick">
+                <img src="img/display02.jpg" alt="맞춤형 콘텐츠 이미지">
+                <p>고객사를 위한 다양하고도 즐거운 콘텐츠를 제작 및 제공합니다.</p>
                 <div class="more__btn">
                     <a href="#"
-                    data-title="일대일 운영관리 자세히보기"
+                    data-title="맞춤형 콘텐츠 자세히보기"
                     title="레이어 팝업 열림">
                         <span>자세히보기</span>
                     </a>
                 </div>
             </div>
-            <div class="item">
-                <img src="" alt="일대일 운영관리 이미지">
-                <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
+            <div class="item threeclick">
+                <img src="img/display03.jpg" alt="모니터링 이미지">
+                <p>꾸준한 유지관리로 화면 장애 발생과 바이러스 및 OS원격상태를 체크합니다.</p>
                 <div class="more__btn">
                     <a href="#"
-                    data-title="일대일 운영관리 자세히보기"
+                    data-title="모니터링 자세히보기"
                     title="레이어 팝업 열림">
                         <span>자세히보기</span>
                     </a>
                 </div>
             </div>
-            <div class="item">
-                <img src="" alt="일대일 운영관리 이미지">
-                <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
+            <div class="item fourclick">
+                <img src="img/display04.jpg" alt="디바이스 원격지원 이미지">
+                <p>담당자가 원격으로 모니터링하여 스케줄 편성등의 작업이 효율적이며 인건비가 절감됩니다.</p>
                 <div class="more__btn">
                     <a href="#"
-                    data-title="일대일 운영관리 자세히보기"
+                    data-title="디바이스 원격지원 자세히보기"
                     title="레이어 팝업 열림">
                         <span>자세히보기</span>
                     </a>
@@ -300,22 +316,6 @@
                 </div>
             </div>
         </div>
-        <div class="gallery__controler">
-            <div class="gallery__btn">
-                <button class="before__btn">
-                    <em class="behind">이전</em>
-                </button>
-                <button class="after__btn">
-                    <em class="behind">이후</em>
-                </button>
-                <div class="gallery__number">
-                    <a href="#" class="first__number">01</a>
-                    <a href="#" class="last__number">04</a>
-                </div>
-                <div class="gallery__bar"></div>
-                <div class="gallery__move"></div>
-            </div>
-        </div>
     </section>
 
     <!--System-->
@@ -326,15 +326,27 @@
         </p>
         <div class="system__container">
             <div class="system__left">
-                <ul class="left__container">
-                    <li class="left__item active">빌딩안내</li>
-                    <li class="left__item">회의 예약・안내</li>
-                    <li class="left__item">통합 모니터링</li>
-                    <li class="left__item">에너지현황 디스플레이</li>
-                </ul>
+                <div class="left__container">
+                    <button 
+                            id="system01"
+                            class="left__item"
+                            title="빌딩안내">빌딩안내</button>
+                    <button 
+                            id="system02"
+                            class="left__item"
+                            title="회의 예약・안내">회의 예약・안내</button>
+                    <button 
+                            id="system03"
+                            class="left__item"
+                            title="통합 모니터링">통합 모니터링</button>
+                    <button 
+                            id="system04"
+                            class="left__item"
+                            title="에너지현황 디스플레이">에너지현황 디스플레이</button>
+                </div>
             </div>
             <div class="system__right">
-                <div class="right__item">
+                <div class="right__item oneclick2">
                     <img src="img/system01.jpg" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
@@ -351,7 +363,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="right__item">
+                <div class="right__item twoclick2">
                     <img src="" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
@@ -368,7 +380,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="right__item">
+                <div class="right__item threeclick2">
                     <img src="" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
@@ -385,7 +397,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="right__item">
+                <div class="right__item fourclick2">
                     <img src="" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
@@ -409,43 +421,71 @@
     <!--reference-->
     <section id="reference">
         <h1 class="reference__title">신뢰있는 구축사례</h1>
-        <div class="reference__container">
-            <div class="reference__item">
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">대교</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">빌딩안내</h2>
-                <p class="reference__item__description">센트로폴리스</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">에너지현황</h2>
-                <p class="reference__item__description">한국전력</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">통합모니터링</h2>
-                <p class="reference__item__description">SC제일은행</p>
-            </div>
-            <div class="reference__item">
-                <h2 class="reference__item__title">멀티비전</h2>
-                <p class="reference__item__description">경기광주역</p>
-            </div>
-            <div class="reference__item">
-            </div>
+        <div class="reference__window">
+            <ul class="reference__container">
+                <li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference01.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">1. 멀티비전</h2>
+                    <p class="reference__item__description">대교</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference02.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">2. 빌딩안내</h2>
+                    <p class="reference__item__description">센트로폴리스</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference03.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">3. 에너지현황</h2>
+                    <p class="reference__item__description">한국전력</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference04.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">4. 통합모니터링</h2>
+                    <p class="reference__item__description">SC제일은행</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference05.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">5. 멀티비전</h2>
+                    <p class="reference__item__description">경기광주역</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference06.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">6. 멀티비전</h2>
+                    <p class="reference__item__description">대교</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference07.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">7. 빌딩안내</h2>
+                    <p class="reference__item__description">센트로폴리스</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference08.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">8. 에너지현황</h2>
+                    <p class="reference__item__description">한국전력</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference09.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">9. 통합모니터링</h2>
+                    <p class="reference__item__description">SC제일은행</p>
+                </li
+                ><li class="reference__item">
+                    <img src="../Mediaspine_Website/img/reference10.jpg" alt="설치사례 이미지">
+                    <h2 class="reference__item__title">10. 멀티비전</h2>
+                    <p class="reference__item__description">경기광주역</p>
+                </li
+                ></ul>
         </div>
         <div class="reference__controler">
             <div class="reference__btn">
-                <button class="before__btn2">
+                <button class="before__btn">
                     <em class="behind">이전</em>
                 </button>
-                <button class="after__btn2">
+                <button class="after__btn">
                     <em class="behind">이후</em>
                 </button>
                 <div class="reference__number">
-                    <a href="#" class="first__number2">01</a>
-                    <a href="#" class="last__number2">10</a>
+                    <a href="#" class="first__number">01</a>
+                    <a href="#" class="last__number">10</a>
                 </div>
                 <div class="reference__bar"></div>
                 <div class="reference__move"></div>

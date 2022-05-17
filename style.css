@@ -16,7 +16,7 @@
     --color-black: #000000;
   
     /*Font-size*/
-    --font-biglarge:45px;
+    --font-biglarge:60px;
     --font-large: 35px;
     --font-medium: 25px;
     --font-regular: 17px;
@@ -27,11 +27,12 @@
     --weight-bold: 700;
     --weight-semi-bold: 600;
     --weight-regular: 400;
+    --weight-thin: 200;
   
     /*Radius*/
     --size-border-radius: 50%;
   }
-  
+
   /*Universal tags*/
   * {
     box-sizing: border-box;
@@ -116,12 +117,14 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
-    /*java로 색상 바꿔야하는 부분*/
     color: white;
+    z-index: 1;
+    transition: ;
 }
 
 .nav__logo{
     padding-left: 5%;
+    margin-top: 5px;
 }
 .nav__menu{
     width: 70%;
@@ -147,6 +150,7 @@
   color: var(--color-black);
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 .nav__menu__container li:nth-child(5) span{
@@ -171,86 +175,126 @@
 /*Home*/  
 #home{
   height: 1080px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
-/*width, height값 모두 100%*/
-.home__slider{
+.home__carousel {
+  position: relative;
+  height: 1080px;
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.home__img{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  outline: 1px solid blue;
 }
 
-.home__container{
-  width: 80%;
+.home__container {
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  outline: 1px solid blue;
+  width: 100%;
   position: relative;
 }
 
-.home__title{
-  font-size: var(--font-biglarge);
-}
-.home__description{
-  font-size: var(--font-biglarge);
-}
-
-/*글자 white*/
-.home__title, .home__description,
-.slider__number a{
-  color: var(--color-white);
-}
-
-/*home main img*/
-#home ul li:first-child{
-  background: no-repeat url(img/home01.jpg);
-}
-
-
-
-/*li display:none으로 자바 만들예정*/
-#home ul li:first-child+li{
-  display: none;
-}
-#home ul li:first-child+li+li{
-  display: none;
-}
-
-/*번호 누르는 부분*/
-.slider__controler{
-  outline: 1px solid red;
+.home__item {
   position: absolute;
-  top: 530px;
-  left: 40%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1000ms;
 }
 
-.slider__move{
-  width: 146px;
-  height: 1px;
-  background-color: yellowgreen;
+.home__item:nth-child(1) {
+  background: no-repeat url(../Mediaspine_Website/img/home01.jpg);
+  opacity: 1;
 }
-.slider__bar{
+
+.home__item:nth-child(2) {
+  background: no-repeat url(../Mediaspine_Website/img/home02.jpg);
+}
+
+.home__item:nth-child(3) {
+  background: no-repeat url(../Mediaspine_Website/img/home03.jpg);
+}
+
+.home__item[data-state=active] {
+  display: block;
+}
+
+/*indicators*/
+.home__indicators {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 440px;
+  text-align: left;
+}
+
+.home__indicator {
+  cursor: pointer;
+  border: none;
+  background-color: rgba( 255, 255, 255, 0 );
+  font-size: var(--font-small);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: var(--weight-thin);
+}
+
+.fontactive{
+  font-weight: var(--weight-bold);
+}
+
+/*home title, description*/
+.home__title{
+  color: white;
+  display: inline-block;
+  font-size: var(--font-biglarge);
+  text-align: left;
+  margin-top: 450px;
+  width: 440px;
+}
+
+/*web font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+.home__description{
+  color: white;
+  font-size: 50px;
+  display: inline-block;
+  text-align: left;
+  margin-left: 30%;
+  /*web font*/
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: var(--weight-thin);
+  width: 350px;
+}
+
+/*home movebar*/
+.home__movebar{
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  height: 10px;
+}
+.movebar__move{
+  width: 33.3%;
   height: 2px;
-  background-color: #7c7979;
+  background-color: white;
+}
+.movebar__bar{
+  width: 100%;
+  height: 2px;
+  background-color: #feffff;
+  opacity: 50%;
+  margin-top: -2px;
 }
 
 /*display*/
 #display{
   height: 1080px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 /*타이틀 부분*/
@@ -268,13 +312,20 @@
 .display__slider ul{
   display: flex;
   justify-content: center;
-  outline: 1px solid red;
   padding-top: 30px;
+  /*outline: 1px solid red;*/
 }
+
 .display__slider ul li{
-  outline: 1px solid red;
   width: 290px;
-  height: 160px;
+  height: 170px;
+  border-bottom: 1px solid #d4d4d4;
+  /*outline: 1px solid red;*/
+}
+
+/*display li bottom부분 (파란색)*/
+.bottomactive{
+  border-bottom: 1px solid #3086f6 !important;
 }
 
 .display__slider ul li div{
@@ -286,9 +337,9 @@
   font-weight: var(--weight-regular);
   color: var(--color-grey);
   padding-top: 5px;
-  outline: 1px solid red;
   width: 150px;
   margin: 0 auto;
+  /*outline: 1px solid red;*/
 }
 
 
@@ -328,20 +379,19 @@
 
 /*이미지 슬라이더 부분*/
 .item__container{
-  outline: 1px solid red;
   display: flex;
   justify-content: center;
   padding-top: 30px;
+  /*outline: 1px solid red;*/
 }
 .item{
-  outline: 1px solid red;
   max-width: 1160px;
   width: 100%;
+  /*outline: 1px solid red;*/
 }
 
 .item img{
   display: inline-block;
-  outline: 1px solid blue;
   width: 100%;
   height: 312px;
   text-align: center;
@@ -351,7 +401,7 @@
 .item p{
   text-align: center;
   padding-top: 30px;
-  outline: 1px solid yellow;
+  /*outline: 1px solid yellow;*/
 }
 
 /*자세히보기 버튼 위치*/
@@ -377,11 +427,11 @@
 
 /*자세히보기 버튼 스타일*/
 .more__btn{
-  outline: 1px solid pink;
   width: 130px;
   height: 20px;
   position: relative;
   font-size: var(--font-small);
+  /*outline: 1px solid pink;*/
 }
 
 .more__btn a::after{
@@ -402,8 +452,8 @@
 /*solution*/
 #solution{
   height: 1080px;
-  outline: 1px solid red;
-  background-color: #fbfbfd;
+  background-color: #f3f3f8;
+  /*outline: 1px solid red;*/
 }
 
 .solution__title{
@@ -416,14 +466,15 @@
   justify-content: center;
   margin: 0 auto;
   max-width: 1400px;
-  outline: 1px solid red;
   padding-top: 95px;
+  /*outline: 1px solid red;*/
 }
 .solution__container li{
-  outline: 1px solid yellowgreen;
   height: 522px;
   width: 35%;
   margin: 0 10px;
+  background-color: white;
+  /*outline: 1px solid yellow;*/
 }
 .solution__container li:first-child{
   margin-left: 0;
@@ -436,9 +487,9 @@
   display: inline-block;
   width: 100%;
   height: 261px;
-  outline: 1px solid pink;
   text-align: center;
   line-height: 261px;
+  /*outline: 1px solid pink;*/
 }
 
 /*good sticker*/
@@ -454,21 +505,21 @@
   position: absolute;
   top: -40px;
   right: 0px;
-  outline: 1px solid;
+  /*outline: 1px solid red;*/
 }
 
 /*solution font*/
 .solution__font{
   margin: 0 auto;
-  outline: 1px solid yellow;
   width: 55%;
+  /*outline: 1px solid yellow;*/
 }
 .container__title{
   padding-top: 60px;
 }
 .container__description{
-  outline: 1px solid pink;
   padding-top: 16px;
+  /*outline: 1px solid pink;*/
 }
 .solution__font div.more__btn{
  margin-top: 20px;
@@ -477,25 +528,25 @@
 /*contents*/
 #contents{
   height: 1080px;
-  outline: 1px solid red;
   margin: 0 auto;
   max-width: 1400px;
+  /*outline: 1px solid red;*/
 }
 
 .contents__container{
-  outline: 1px solid salmon;
   display: flex;
   align-items: center;
   padding-top: 200px;
+  /*outline: 1px solid red;*/
 }
 .contents__title{
   width: 300px;
   margin-right: 80px;
 }
 .gallery__container{
-  outline: 1px solid red;
   display: flex;
   width: 100%;
+  /*outline: 1px solid red;*/
 }
 
 .gallery{
@@ -510,16 +561,16 @@
 
 .gallery img{
   display: inline-block;
-  outline: 1px solid red;
   height: 380px;
   width: 100%;
   text-align: center;
   line-height: 420px;
+  /*outline: 1px solid red;*/
 }
 
 .gallery__title{
   padding-top: 40px;
-  outline: 1px solid pink;
+  /*outline: 1px solid red;*/
 }
 
 .gallery__description{
@@ -536,51 +587,52 @@
 
 #system{
   height: 1080px;
-  outline: 1px solid red;
-  background-color: #fbfbfd;
+  background-color: #f3f3f8;
+  /*outline: 1px solid red;*/
 }
 
 .system__title{
-  outline: 1px solid red;
   text-align: center;
   padding-top: 200px;
+  /*outline: 1px solid red;*/
 }
 
 .system__description{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
 }
 
 .system__container{
-  outline: 1px solid red;
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
   height: 570px;
+  /*outline: 1px solid red;*/
 }
 
 .system__left{
-  outline: 1px solid blue;
-  flex-basis: 30%;
+  flex-basis: 35%;
+  /*outline: 1px solid blue;*/
 }
 
 .left__container{
-  outline: 1px solid;
   display: flex;
   flex-direction: column;
+  /*outline: 1px solid red;*/
 }
 
 .left__item{
-  outline: 1px solid yellowgreen;
   height: 140px;
   text-indent: 25%;
   line-height: 140px;
   margin-bottom: 3px;
   position: relative;
-  background-color: #eaf3ff;
+  background-color: #d1e5ff;
   font-size: 20px;
+  text-align: left;
+  /*outline: 1px solid red;*/
 }
 
 .active{
@@ -602,14 +654,14 @@
 }
 
 .system__right{
-  flex-basis: 70%;
+  flex-basis: 65%;
+  background-color: white;
 }
 
 
 /*system right -> display none부분*/
 
 .system__right div:first-child{
-  outline: 1px solid yellow;
 }
 
 .system__right div:first-child+div{
@@ -626,18 +678,18 @@
 /*right item*/
 
 .right__item img{
-  outline: 1px solid red;
   display: block;
   height: 283px;
   text-align: center;
   line-height: 283px;
   width: 100%;
+  /*outline: 1px solid red;*/
 }
 
 .right__item__content{
-  outline: 1px solid pink;
   width: 50%;
   margin: 0 auto;
+  /*outline: 1px solid red;*/
 }
 
 .right__title{
@@ -655,15 +707,15 @@
 /*reference*/
 #reference{
   height: 1080px;
-  outline: 1px solid red;
   margin: 0 auto;
   max-width: 1400px;
+  /*outline: 1px solid red;*/
 }
 
 .reference__title{
-  outline: 1px solid red;
   text-align: center;
   padding-top: 200px;
+  /*outline: 1px solid red;*/
 }
 
 .reference__window{
@@ -671,49 +723,48 @@
   position: relative;
   transform: translateY(-50%);
   transform: translateX(-50%);
-  border: 1px solid red;
   width: 1400px; 
   height: 400px;
   left: 50%;
   top: 110px;
+  /*outline: 1px solid red;*/
 }
 
 .reference__container{
   position: absolute;
   height: 400px;
   width: 1400px;
-  border: 1px solid green;
+  /*outline: 1px solid green;*/
 }
 
 .reference__item{
-  color: red;
   width: 275px;
   height: 400px;
-  border: 1px solid #555;
   display: inline-block;
   margin: 2px;
+  /*outline: 1px solid red;*/
 }
 
 
 /*reference controler*/
 .reference__controler{
-  outline: 1px solid blue;
   width: 1050px;
   margin: 0 auto;
   margin-top: 150px;
+  /*outline: 1px solid red;*/
 }
 
 .reference__btn{
-  outline: 1px solid red;
   position: relative;
+  /*outline: 1px solid red;*/
 }
 
 /*이전버튼*/
 .before__btn{
-  outline: 1px solid blue;
   width: 24px;
   height: 24px;
   background-image:url(../Mediaspine_Website/img/before_btn.png);
+  /*outline: 1px solid red;*/
 }
 .before__btn em{
   display: none;
@@ -721,11 +772,11 @@
 
 /*이후버튼*/
 .after__btn{
-  outline: 1px solid blue;
   margin-left: 94%;
   width: 24px;
   height: 24px;
   background-image:url(../Mediaspine_Website/img/after_btn.png);
+  /*outline: 1px solid red;*/
 }
 .after__btn em{
   display: none;
@@ -734,19 +785,19 @@
 
 /*숫자부분*/
 .reference__number{
-  outline: 1px solid yellow;
   position: absolute;
   top: 4px;
   left: 40px;
   width: 92%;
+  /*outline: 1px solid red;*/
 }
 
 .first__number{
-  outline: 1px solid salmon;
   margin-right: 95%;
+  /*outline: 1px solid red;*/
 }
 .last__number{
-  outline: 1px solid salmon;
+  /*outline: 1px solid red;*/
 }
 
 /*reference bar*/
@@ -775,23 +826,24 @@
 }
 
 .reference__item__title{
-  outline: 1px solid skyblue;
   margin-top: -130px;
   margin-left: 20px;
   color: white;
+  /*outline: 1px solid skyblue;*/
 }
 
 .reference__item__description{
-  outline: 1px solid pink;
   margin-top: 15px;
   margin-left: 20px;
   color: white;
+  /*outline: 1px solid pink;*/
 }
 
 /*contact*/
 #contact{
-  outline: 1px solid salmon;
   height: 840px;
+  background-color: #f3f3f8;
+  /*outline: 1px solid red;*/
 }
 
 .contact__container{
@@ -800,23 +852,23 @@
 }
 .contact__container img{
   display: block;
-  outline: 1px solid red;
   height: 470px;
   width: 50%;
   text-align: center;
   line-height: 470px;
+  /*outline: 1px solid red;*/
 }
 .contact__right{
-  outline: 1px solid var(--color-blue);
   padding-left: 10%;
+  /*outline: 1px solid red;*/
 }
 .contact__title{
   padding-top: 140px;
-  outline: 1px solid yellowgreen;
+  /*outline: 1px solid red;*/
 }
 .contact__description{
-  outline: 1px solid slateblue;
   padding-top: 30px;
+  /*outline: 1px solid red;*/
 }
 
 .contact__description+div.more__btn{
@@ -825,10 +877,10 @@
 
 /*footer*/
 #footer{
-  outline: 1px solid salmon;
   height: 240px;
   background-color: black;
   color: white;
+  /*outline: 1px solid red;*/
 }
 #footer p{
   color: white;
@@ -837,13 +889,13 @@
 .footer__container{
   max-width: 1400px;
   display: flex;
-  outline: 1px solid yellow;
   padding-top: 30px;
   margin: 0 auto;
+  /*outline: 1px solid red;*/
 }
 .footer__left{
   flex-basis: 85%;
-  outline: 1px solid wheat;
+  /*outline: 1px solid red;*/
 }
 
 .footer__left ul{
@@ -861,7 +913,7 @@
 }
 .footer__right{
   flex-basis: 15%;
-  outline: 1px solid wheat;
+  /*outline: 1px solid red;*/
 }
 
 

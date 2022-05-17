@@ -38,52 +38,48 @@
 
     <!--Home-->
     <section id="home">
-        <ul class="home__slider">
-            <li class="home__img">
-                <div class="home__container">
-                    <h1 class="home__title">
+        <div id="home__carousel" class="home__carousel">
+            <div class="home__container">
+                <div class="home__item" data-state="active">
+                    <h2 class="home__title">
                         디스플레이를<br />
                         쉽고 간편하게
-                    </h1>
-                    <h2 class="home__description">
+                    </h2>
+                    <p class="home__description">
                         Mediaspine<br />
                         Digital Signage
-                    </h2>
+                    </p>
                 </div>
-            </li>
-            <li class="home__img">
-                <div class="home__container">
-                    <h1 class="home__title">
-                        디스플레이를<br />
-                        쉽고 간편하게
-                    </h1>
-                    <h2 class="home__description">
-                        Mediaspine<br />
-                        Digital Signage
-                    </h2>
-                </div>
-            </li>
-            <li class="home__img">
-                <div class="home__container">
-                    <h1 class="home__title">
-                        디스플레이를<br />
-                        쉽고 간편하게
-                    </h1>
-                    <h2 class="home__description">
-                        Mediaspine<br />
-                        Digital Signage
-                    </h2>
-                </div>
-            </li>
-        </ul>
-        <div class="slider__controler">
-            <div class="slider__number">
-                <a href="#">01</a>
-                <a href="#">02</a>
-                <a href="#">03</a>
+            <div class="home__item">
+                <h2 class="home__title">
+                    다양한 정보를<br />
+                    효과적으로
+                </h2>
+                <p class="home__description">
+                    Mediaspine<br />
+                    Kiosk Solution
+                </p>
             </div>
-            <div class="slider__bar"></div>
-            <div class="slider__move"></div>
+            <div class="home__item">
+                <h2 class="home__title">
+                    모두에게<br />
+                    좋은 내일을
+                </h2>
+                <p class="home__description">
+                    Mediaspine<br />
+                    For You
+                </p>
+            </div>
+            </div>
+            <div class="home__indicators">
+                <input id="indicator01" class="home__indicator fontactive" name="indicator" value="01" data-slide="1" data-state="active" checked type="button" />
+                <input id="indicator02" class="home__indicator" name="indicator" value="02" data-slide="2" type="button" />
+                <input id="indicator03" class="home__indicator" name="indicator" value="03" data-slide="3" type="button" />
+            </div>
+            <div class="home__movebar">
+                <div class="movebar__move"></div>
+                <div class="movebar__bar"></div>
+            </div>
         </div>
     </section>
 
@@ -98,7 +94,8 @@
         </div>
         <div class="display__slider">
             <ul>
-                <li>
+                <li id="bottom01"
+                    class="bottomactive">
                     <div>
                         <button 
                             id="displayicon01"
@@ -108,7 +105,7 @@
                             class="slider__title h2active">일대일 운영관리</h2>
                     </div>
                 </li>
-                <li>
+                <li id="bottom02" class="">
                     <div>
                         <button 
                             id="displayicon02"
@@ -118,7 +115,7 @@
                             class="slider__title">맞춤형 콘텐츠</h2>
                     </div>
                 </li>
-                <li>
+                <li id="bottom03" class="">
                     <div>
                         <button 
                             id="displayicon03"
@@ -128,7 +125,7 @@
                             class="slider__title">모니터링 서비스</h2>
                     </div>
                 </li>
-                <li>
+                <li id="bottom04" class="">
                     <div>
                         <button 
                             id="displayicon04"
@@ -329,7 +326,7 @@
                 <div class="left__container">
                     <button 
                             id="system01"
-                            class="left__item"
+                            class="left__item active"
                             title="빌딩안내">빌딩안내</button>
                     <button 
                             id="system02"
@@ -364,16 +361,17 @@
                     </div>
                 </div>
                 <div class="right__item twoclick2">
-                    <img src="" alt="빌딩안내 이미지">
+                    <img src="img/system02.jpg" alt="회의 예약・안내 이미지">
                     <div class="right__item__content">
-                        <h2 class="right__title">빌딩안내</h2>
+                        <h2 class="right__title">회의 예약・안내</h2>
                         <p class="right__description">
-                            건물 내방객 또는 직원들에게 다양한 정보를<br />
-                            시각적으로 전달하는 시스템입니다.
+                            건물 내 회의실을 통합으로 관리하는 시스템으로<br />
+                            실시간 회의실 예약/관리를 도와주어<br />
+                            편리한 회의 운영환경을 제공합니다.
                         </p>
                         <div class="more__btn">
                             <a href="#"
-                            data-title="빌딩안내 콘텐츠 자세히보기"
+                            data-title="회의 예약・안내 콘텐츠 자세히보기"
                             title="레이어 팝업 열림">
                                 <span>자세히보기</span>
                             </a>
@@ -381,16 +379,16 @@
                     </div>
                 </div>
                 <div class="right__item threeclick2">
-                    <img src="" alt="빌딩안내 이미지">
+                    <img src="img/system03.jpg" alt="통합 모니터링 이미지">
                     <div class="right__item__content">
-                        <h2 class="right__title">빌딩안내</h2>
+                        <h2 class="right__title">통합 모니터링</h2>
                         <p class="right__description">
-                            건물 내방객 또는 직원들에게 다양한 정보를<br />
-                            시각적으로 전달하는 시스템입니다.
+                            통합관제센터 내 다양한 설비 시스템 운영화면을<br />
+                            통합하여 모니터링 할 수 있도록 구성하는 시스템입니다.
                         </p>
                         <div class="more__btn">
                             <a href="#"
-                            data-title="빌딩안내 콘텐츠 자세히보기"
+                            data-title="통합 모니터링 콘텐츠 자세히보기"
                             title="레이어 팝업 열림">
                                 <span>자세히보기</span>
                             </a>
@@ -398,16 +396,17 @@
                     </div>
                 </div>
                 <div class="right__item fourclick2">
-                    <img src="" alt="빌딩안내 이미지">
+                    <img src="img/system04.jpg" alt="에너지현황 디스플레이 이미지">
                     <div class="right__item__content">
-                        <h2 class="right__title">빌딩안내</h2>
+                        <h2 class="right__title">에너지현황 디스플레이</h2>
                         <p class="right__description">
-                            건물 내방객 또는 직원들에게 다양한 정보를<br />
-                            시각적으로 전달하는 시스템입니다.
+                            건물 내의 다양한 에너지 현황을<br />
+                            (각종 설비/전력량/수도 사용량/태양광 등)<br />
+                            데이터 연동을 통해 표출하는 시스템입니다.
                         </p>
                         <div class="more__btn">
                             <a href="#"
-                            data-title="빌딩안내 콘텐츠 자세히보기"
+                            data-title="에너지현황 디스플레이 콘텐츠 자세히보기"
                             title="레이어 팝업 열림">
                                 <span>자세히보기</span>
                             </a>

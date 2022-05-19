@@ -34,8 +34,11 @@
   }
 
   /*Universal tags*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
   * {
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
   html, body{
@@ -106,70 +109,155 @@
 
 
 /*Navbar*/
-
 #nav{
-    width: 100%;
-    height: 80px;
-    outline: 1px solid red;
-    border-bottom: 1px solid #566171;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0;
-    color: white;
-    z-index: 1;
-    transition: ;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 80px;
+  z-index: 1;
+  transition:.5s;
+  border-bottom:1px solid #7c7c7c71;
 }
 
+/*logo와 menu를 플렉스해서 flex-basis로 자리차지*/
 .nav__logo{
-    padding-left: 5%;
-    margin-top: 5px;
+  text-align: right;
+  width: 220px;
+  height: 35px;
+  flex-basis: 17%;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 .nav__menu{
-    width: 70%;
-    padding-right: 5%;
-  }
+  flex-basis: 70%;
+}
+
+/*메인 메뉴*/
 .nav__menu__container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.nav__menu__item{
+  width: 100%;
+  text-align: center;
 }
 
-.nav__menu__container li{
-  line-height: 50px;
+#mainmenu{
+  display: block;
+  color: white;
+  width: 60%;
+  height: 100%;
+  line-height: 80px;
+  margin: 0 auto;
 }
 
-/*문의하기*/
-.nav__menu__container li:nth-child(5){
-  margin-top: 5px;
-  width: 140px;
+.nav__menu__item:hover #mainmenu{
+  border-bottom:1px solid #0065e9;
+  color: #0065e9 !important;
+  font-weight: var(--weight-bold);
+  transition: all 0.3s;
+}
+
+/*서브 메뉴*/
+.nav__submenu__container{
+  display: none;
+  padding-top: 10px;
+}
+.nav__submenu__item{
   height: 40px;
   line-height: 40px;
+}
+
+.nav__submenu__item a{
+  font-size: 16px;
+}
+
+
+.nav__submenu__bg{
+  width: 100%;
+  height: 310px;
   background-color: white;
-  color: var(--color-black);
-  border-radius: 5px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  border-bottom:1px solid #7c7c7c71;
+}
+
+
+/*문의하기 버튼*/
+
+.nav__menu__lastitem{
+  flex-basis: 13%;
+}
+.contactbtn{
+  font-size: var(--font-regular);
+  display: block;
+  width: 135px;
+  height: 40px;
   text-align: center;
+  line-height: 40px;
+  margin: 0 auto;
+  color: black;
+  background-color: #FFFFFF;
+  border-radius: .2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   cursor: pointer;
 }
 
-.nav__menu__container li:nth-child(5) span{
-  width: 100px;
-  height: 24px;
-  position: relative;
-  padding-left: 30px;
+.contactbtn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
-.nav__menu__container li:nth-child(5) span::before{
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  background: no-repeat url(../Mediaspine_Website/img/contact_btn.png);
-  position: absolute;
-  top: -3px;
-  left: 1px;
+.contactbtn:focus-visible {
+  box-shadow: none;
 }
+
+.contactbtn:hover{
+  background-color: #3086f6;
+  color: white;
+  transition: all 0.3s;
+}
+
+/*문의하기 버튼 2*/
+.contactbtn2{
+  font-size: var(--font-regular);
+  display: block;
+  width: 135px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 auto;
+  color: white;
+  background-color: #3086f6;
+  border-radius: .2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.contactbtn2:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.contactbtn2:focus-visible {
+  box-shadow: none;
+}
+
+.contactbtn2:hover{
+  background-color: rgb(249,250,251);
+  color: #000000;
+  transition: all 0.3s;
+}
+
+
 
 
 /*Home*/  
@@ -424,6 +512,65 @@
 .fourclick{
   display: none;
 }
+
+/*fadein 페이드인 keyframe animation 키프레임 애니메이션*/
+.fadein{
+  webkit-animation: fadeIn 0.5s 0s 1 ease-in normal;
+  -moz-animation: fadeIn 0.5s 0s 1 ease-in normal;
+  -ms-animation: fadeIn 0.5s 0s 1 ease-in normal;
+  -o-animation: fadeIn 0.5s 0s 1 ease-in normal;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {   
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn { 
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {   
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+@-o-keyframes fadeIn {   
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {   
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+
+
 
 /*자세히보기 버튼 스타일*/
 .more__btn{
@@ -709,6 +856,7 @@
   height: 1080px;
   margin: 0 auto;
   max-width: 1400px;
+  position: relative;
   /*outline: 1px solid red;*/
 }
 
@@ -747,24 +895,16 @@
 
 
 /*reference controler*/
-.reference__controler{
-  width: 1050px;
-  margin: 0 auto;
-  margin-top: 150px;
-  /*outline: 1px solid red;*/
-}
 
-.reference__btn{
-  position: relative;
-  /*outline: 1px solid red;*/
-}
 
 /*이전버튼*/
 .before__btn{
-  width: 24px;
-  height: 24px;
+  position: absolute;
+  top: 560px;
+  left: -60px;
+  width: 40px;
+  height: 40px;
   background-image:url(../Mediaspine_Website/img/before_btn.png);
-  /*outline: 1px solid red;*/
 }
 .before__btn em{
   display: none;
@@ -772,51 +912,17 @@
 
 /*이후버튼*/
 .after__btn{
-  margin-left: 94%;
-  width: 24px;
-  height: 24px;
+  position: absolute;
+  top: 560px;
+  right: -60px;
+  width: 40px;
+  height: 40px;
   background-image:url(../Mediaspine_Website/img/after_btn.png);
-  /*outline: 1px solid red;*/
 }
 .after__btn em{
   display: none;
 }
 
-
-/*숫자부분*/
-.reference__number{
-  position: absolute;
-  top: 4px;
-  left: 40px;
-  width: 92%;
-  /*outline: 1px solid red;*/
-}
-
-.first__number{
-  margin-right: 95%;
-  /*outline: 1px solid red;*/
-}
-.last__number{
-  /*outline: 1px solid red;*/
-}
-
-/*reference bar*/
-.reference__move{
-  position: absolute;
-  top: 12px;
-  left: 10%;
-  width: 20%;
-  height: 2px;
-  background-color: yellowgreen;
-}
-.reference__bar{
-  position: absolute;
-  top: 12px;
-  left: 10%;
-  width: 77%;
-  height: 2px;
-  background-color: #7c7979;
-}
 
 /*img, h2, p*/
 
@@ -841,13 +947,13 @@
 
 /*contact*/
 #contact{
-  height: 840px;
+  height: 700px;
   background-color: #f3f3f8;
   /*outline: 1px solid red;*/
 }
 
 .contact__container{
-  padding-top: 180px;
+  padding-top: 150px;
   display: flex;
 }
 .contact__container img{
@@ -903,6 +1009,9 @@
 }
 .footer__left ul li{
   margin-right: 20px;
+}
+.footer__left ul li a{
+  color: white;
 }
 .footer__address{
   padding-top: 70px;

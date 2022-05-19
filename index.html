@@ -23,17 +23,39 @@
     <!--Nav-->
     <nav id="nav">
         <div class="nav__logo">
-            <img src="img/logo.png" alt="logo">
+            <img id="logo" src="img/logo.png" alt="logo">
         </div>
         <div class="nav__menu">
-            <ul class="nav__menu__container">
-                <li class="nav__menu__item">디스플레이 운영관리</li>
-                <li class="nav__menu__item">솔루션</li>
-                <li class="nav__menu__item">시스템 구축</li>
-                <li class="nav__menu__item">회사소개</li>
-                <li class="nav__menu__item"><span>문의하기</span></li>
+            <ul class="nav__menu__container" onmouseover="return mouseOver();" onmouseout="return mouseOut();">
+                <li class="nav__menu__item"><a id="mainmenu" href="#">디스플레이 운영관리</a></li>
+                <li class="nav__menu__item"><a id="mainmenu" href="#">솔루션</a>
+                    <ul class="nav__submenu__container">
+                        <li class="nav__submenu__item"><a href="#">빌딩안내(DID PLUS)</a></li>
+                        <li class="nav__submenu__item"><a href="#">회의 예약・안내(MEET PLUS)</a></li>
+                        <li class="nav__submenu__item"><a href="#">콘텐츠 개발</a></li>
+                    </ul>
+                </li>
+                <li class="nav__menu__item"><a id="mainmenu" href="#">시스템 구축</a>
+                    <ul class="nav__submenu__container">
+                        <li class="nav__submenu__item"><a href="#">빌딩안내</a></li>
+                        <li class="nav__submenu__item"><a href="#">회의 예약・안내</a></li>
+                        <li class="nav__submenu__item"><a href="#">통합 모니터링</a></li>
+                        <li class="nav__submenu__item"><a href="#">에너지현황 디스플레이</a></li>
+                    </ul>
+                </li>
+                <li class="nav__menu__item"><a id="mainmenu" href="#">회사소개</a>
+                    <ul class="nav__submenu__container">
+                        <li class="nav__submenu__item"><a href="#">인사말</a></li>
+                        <li class="nav__submenu__item"><a href="#">회사 연혁</a></li>
+                        <li class="nav__submenu__item"><a href="#">회사 인증서</a></li>
+                        <li class="nav__submenu__item"><a href="#">협력사</a></li>
+                        <li class="nav__submenu__item"><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
             </ul>
+            <div class="nav__submenu__bg"></div>
         </div>
+        <button class="nav__menu__lastitem"><a class="contactbtn" href="#">문의하기</a></button>
     </nav>
 
     <!--Home-->
@@ -138,7 +160,7 @@
             </ul>
         </div>
         <div class="item__container">
-            <div class="item oneclick">
+            <div class="item oneclick fadein">
                 <img src="img/display01.jpg" alt="일대일 운영관리 이미지">
                 <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
                 <div class="more__btn">
@@ -149,7 +171,7 @@
                     </a>
                 </div>
             </div>
-            <div class="item twoclick">
+            <div class="item twoclick fadein">
                 <img src="img/display02.jpg" alt="맞춤형 콘텐츠 이미지">
                 <p>고객사를 위한 다양하고도 즐거운 콘텐츠를 제작 및 제공합니다.</p>
                 <div class="more__btn">
@@ -160,7 +182,7 @@
                     </a>
                 </div>
             </div>
-            <div class="item threeclick">
+            <div class="item threeclick fadein">
                 <img src="img/display03.jpg" alt="모니터링 이미지">
                 <p>꾸준한 유지관리로 화면 장애 발생과 바이러스 및 OS원격상태를 체크합니다.</p>
                 <div class="more__btn">
@@ -171,7 +193,7 @@
                     </a>
                 </div>
             </div>
-            <div class="item fourclick">
+            <div class="item fourclick fadein">
                 <img src="img/display04.jpg" alt="디바이스 원격지원 이미지">
                 <p>담당자가 원격으로 모니터링하여 스케줄 편성등의 작업이 효율적이며 인건비가 절감됩니다.</p>
                 <div class="more__btn">
@@ -252,7 +274,7 @@
             </h1>
             <div class="gallery__container">
                 <div class="gallery">
-                    <img src="img/content01.png" alt="뉴스 이미지">
+                    <img src="img/content01.jpg" alt="뉴스 이미지">
                     <h2 class="gallery__title">뉴스</h2>
                     <p class="gallery__description">
                         전문기관과 연결해 신속하고<br />
@@ -267,7 +289,7 @@
                     </div>
                 </div>
                 <div class="gallery">
-                    <img src="img/content02.png" alt="날씨 이미지">
+                    <img src="img/content02.jpg" alt="날씨 이미지">
                     <h2 class="gallery__title">날씨</h2>
                     <p class="gallery__description">
                         일자별 날씨와 미세먼지<br />
@@ -282,7 +304,7 @@
                     </div>
                 </div>
                 <div class="gallery">
-                    <img src="img/content03.png" alt="경제 이미지">
+                    <img src="img/content03.jpg" alt="경제 이미지">
                     <h2 class="gallery__title">경제</h2>
                     <p class="gallery__description">
                         국내증시와 관련된 경제, 금융<br />
@@ -297,7 +319,7 @@
                     </div>
                 </div>
                 <div class="gallery last">
-                    <img src="img/content04.png" alt="생활정보 이미지">
+                    <img src="img/content04.jpg" alt="생활정보 이미지">
                     <h2 class="gallery__title">생활정보</h2>
                     <p class="gallery__description">
                         일상생활에 밀접해있는 유익한<br />
@@ -343,7 +365,7 @@
                 </div>
             </div>
             <div class="system__right">
-                <div class="right__item oneclick2">
+                <div class="right__item oneclick2 fadein">
                     <img src="img/system01.jpg" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
@@ -360,7 +382,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="right__item twoclick2">
+                <div class="right__item twoclick2 fadein">
                     <img src="img/system02.jpg" alt="회의 예약・안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">회의 예약・안내</h2>
@@ -378,7 +400,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="right__item threeclick2">
+                <div class="right__item threeclick2 fadein">
                     <img src="img/system03.jpg" alt="통합 모니터링 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">통합 모니터링</h2>
@@ -395,7 +417,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="right__item fourclick2">
+                <div class="right__item fourclick2 fadein">
                     <img src="img/system04.jpg" alt="에너지현황 디스플레이 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">에너지현황 디스플레이</h2>
@@ -474,22 +496,12 @@
                 </li
                 ></ul>
         </div>
-        <div class="reference__controler">
-            <div class="reference__btn">
-                <button class="before__btn">
-                    <em class="behind">이전</em>
-                </button>
-                <button class="after__btn">
-                    <em class="behind">이후</em>
-                </button>
-                <div class="reference__number">
-                    <a href="#" class="first__number">01</a>
-                    <a href="#" class="last__number">10</a>
-                </div>
-                <div class="reference__bar"></div>
-                <div class="reference__move"></div>
-            </div>
-        </div>
+        <button class="before__btn">
+            <em class="behind">이전</em>
+        </button>
+        <button class="after__btn">
+            <em class="behind">이후</em>
+        </button>
     </section>
 
     <!--contact-->
@@ -518,11 +530,11 @@
         <div class="footer__container">
             <div class="footer__left">
                 <ul>
-                    <li>개인정보처리방침</li>
-                    <li>이용약관</li>
-                    <li>서비스이용약관</li>
-                    <li>이메일무단수집거부</li>
-                    <li>아이디어정책</li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">서비스이용약관</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">아이디어정책</a></li>
                 </ul>
                 <address class="footer__address">
                     서울특별시 금천구 가산디지털1로 30, 509호(에이스하이엔드타워10차)<br />

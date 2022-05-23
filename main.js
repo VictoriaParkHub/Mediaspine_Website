@@ -12,8 +12,28 @@
   const submenubg = document.querySelector('.nav__submenu__bg');
   const submenucontainer = document.querySelectorAll('.nav__submenu__container');
 
-  //mouseover하면 submenubg가 보임
-  function mouseOver(){
+
+  //scrolling -> headerHeight값으로 if문
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > headerHeight) {
+      nav.setAttribute("style", "background-color:white");
+      document.getElementById("logo").src="img/logo2.png";
+      mainmenu.forEach(mainmenu => mainmenu.setAttribute("style", "color:black"));
+      contactbtn.classList.remove("contactbtn");
+      contactbtn.classList.add("contactbtn2");
+    }
+    else {
+      nav.setAttribute("style", "background: transparent;");
+      document.getElementById("logo").src="img/logo.png";
+      mainmenu.forEach(mainmenu => mainmenu.setAttribute("style", "color:white"));
+      contactbtn.classList.remove("contactbtn2");
+      contactbtn.classList.add("contactbtn");
+    }
+  });
+  
+
+   //mouseover하면 submenubg가 보임
+   function mouseOver(){
     submenubg.setAttribute("style", "visibility: visible");
     document.getElementById("logo").src="img/logo2.png";
     //queryselectorAll은 반복문인 forEach와 함께 사용해준다. (계속 한개만 선택되니까)
@@ -42,25 +62,79 @@
     }
   };
 
-  //scrolling -> headerHeight값으로 if문
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > headerHeight) {
-      nav.setAttribute("style", "background-color:white");
-      document.getElementById("logo").src="img/logo2.png";
-      mainmenu.forEach(mainmenu => mainmenu.setAttribute("style", "color:black"));
-      contactbtn.classList.remove("contactbtn");
-      contactbtn.classList.add("contactbtn2");
-    }
-    else {
-      nav.setAttribute("style", "background: transparent;");
-      document.getElementById("logo").src="img/logo.png";
-      mainmenu.forEach(mainmenu => mainmenu.setAttribute("style", "color:white"));
-      contactbtn.classList.remove("contactbtn2");
-      contactbtn.classList.add("contactbtn");
-    }
-  });
-  
 
+  //mouseover하면 gallery img가 펼쳐짐
+
+  const galleryImg01 = document.querySelector('.galleryImg01');
+  const gallery01 = document.querySelector('#gallery01');
+
+  //01
+  function contentMouseOver1(){    
+    galleryImg01.classList.add("imgover");
+    galleryImg01.classList.remove("imgout");
+    gallery01.classList.add("containerover");
+    gallery01.classList.remove("containerout");
+  };
+  function contentMouseOut1(){
+    galleryImg01.classList.add("imgout");
+    galleryImg01.classList.remove("imgover");
+    gallery01.classList.add("containerout");
+    gallery01.classList.remove("containerover");
+  };
+
+  //02
+
+  const galleryImg02 = document.querySelector('.galleryImg02');
+  const gallery02 = document.querySelector('#gallery02');
+
+  function contentMouseOver2(){    
+    galleryImg02.classList.add("imgover");
+    galleryImg02.classList.remove("imgout");
+    gallery02.classList.add("containerover");
+    gallery02.classList.remove("containerout");
+  };
+  function contentMouseOut2(){
+    galleryImg02.classList.add("imgout");
+    galleryImg02.classList.remove("imgover");
+    gallery02.classList.add("containerout");
+    gallery02.classList.remove("containerover");
+  };
+
+  //03
+
+  const galleryImg03 = document.querySelector('.galleryImg03');
+  const gallery03 = document.querySelector('#gallery03');
+
+  function contentMouseOver3(){    
+    galleryImg03.classList.add("imgover");
+    galleryImg03.classList.remove("imgout");
+    gallery03.classList.add("containerover");
+    gallery03.classList.remove("containerout");
+  };
+  function contentMouseOut3(){
+    galleryImg03.classList.add("imgout");
+    galleryImg03.classList.remove("imgover");
+    gallery03.classList.add("containerout");
+    gallery03.classList.remove("containerover");
+  };
+
+  //04
+  
+  const galleryImg04 = document.querySelector('.galleryImg04');
+  const gallery04 = document.querySelector('#gallery04');
+
+  function contentMouseOver4(){    
+    galleryImg04.classList.add("imgover");
+    galleryImg04.classList.remove("imgout");
+    gallery04.classList.add("containerover");
+    gallery04.classList.remove("containerout");
+  };
+  function contentMouseOut4(){
+    galleryImg04.classList.add("imgout");
+    galleryImg04.classList.remove("imgover");
+    gallery04.classList.add("containerout");
+    gallery04.classList.remove("containerover");
+  };
 
 
 
@@ -305,14 +379,14 @@ function FourClick() {
       document.getElementById('system03').addEventListener('click', ThreeClick2);
       document.getElementById('system04').addEventListener('click', FourClick2);
 
-};
+    };
 
 
 //reference
 
 const container = document.querySelector(".reference__container");
 const prevBtn = document.querySelector(".before__btn");
-const nextBtn = document.querySelector(".after__btn"); 
+const nextBtn = document.querySelector(".after__btn");
 
 (function addEvent(){
   prevBtn.addEventListener('click', translateContainer.bind(this, 1));

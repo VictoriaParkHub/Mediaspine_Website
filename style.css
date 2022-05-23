@@ -676,7 +676,6 @@
 #contents{
   height: 1080px;
   margin: 0 auto;
-  max-width: 1400px;
   /*outline: 1px solid red;*/
 }
 
@@ -684,35 +683,36 @@
   display: flex;
   align-items: center;
   padding-top: 200px;
-  /*outline: 1px solid red;*/
 }
 .contents__title{
-  width: 300px;
+  width: 270px;
+  margin-left: 10%;
   margin-right: 80px;
 }
 .gallery__container{
   display: flex;
   width: 100%;
-  /*outline: 1px solid red;*/
 }
 
 .gallery{
+  width: 20%;
   height: 620px;
-  width: 100%;
-  padding-right: 20px;
+  margin-right: 20px;
+  transition: all 0.5s;
 }
+
 
 .last{
   padding: 0px;
 }
 
-.gallery img{
-  display: inline-block;
+.gallery__img{
   height: 380px;
-  width: 100%;
+  width: 210px;
   text-align: center;
   line-height: 420px;
-  /*outline: 1px solid red;*/
+  border: 1px solid #e7e7e7;
+  transition: all 0.5s;
 }
 
 .gallery__title{
@@ -727,6 +727,47 @@
 
 .gallery__description+div{
   margin-top:35px;
+}
+
+/*각각 다른 배경이미지*/
+.gallery__container .gallery:nth-of-type(1) div:first-child{
+  background: no-repeat url(../Mediaspine_Website/img/content01.jpg);
+  background-size: cover;
+}
+
+.gallery__container .gallery:nth-of-type(2) div:first-child{
+  background: no-repeat url(../Mediaspine_Website/img/content02.jpg);
+  background-size: cover;
+}
+
+.gallery__container .gallery:nth-of-type(3) div:first-child{
+  background: no-repeat url(../Mediaspine_Website/img/content03.jpg);
+  background-size: cover;
+}
+
+.gallery__container .gallery:nth-of-type(4) div:first-child{
+  background: no-repeat url(../Mediaspine_Website/img/content04.jpg);
+  background-size: cover;
+}
+
+/*마우스 오버 했을 때 사용할 클래스*/
+
+
+
+.containerover{
+  width: 40%;
+}
+
+.containerout{
+  width: 17%;
+}
+
+.imgover{
+  width: 550px;
+}
+
+.imgout{
+  width: 210px;
 }
 
 

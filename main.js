@@ -1,6 +1,7 @@
 'use strict';
 
 
+
   //scrolling 변수
   const nav = document.querySelector("#nav");
   const headerHeight = nav.getBoundingClientRect().height;
@@ -31,9 +32,8 @@
     }
   });
   
-
    //mouseover하면 submenubg가 보임
-   function mouseOver(){
+  function mouseOver(){
     submenubg.setAttribute("style", "visibility: visible");
     document.getElementById("logo").src="img/logo2.png";
     //queryselectorAll은 반복문인 forEach와 함께 사용해준다. (계속 한개만 선택되니까)
@@ -138,12 +138,56 @@
 
 
 
+
 window.onload = function () {
+
+
+//scroll하면 한 section씩 이동하는 효과
+
+
+var q = document.getElementsByClassName('scroll')
+var ls = window.pageYOffset;
+var arr = [];
+for (var i=0; i<q.length; i++){
+    arr.push(q[i].offsetTop)
+}
+
+window.addEventListener('resize', function() {
+    arr = [];
+    for (var i=0; i<q.length; i++){
+        arr.push(q[i].offsetTop)
+    }
+})
+
+document.addEventListener('scroll', function() {
+    var cs = window.pageYOffset;
+    for (var i=0; i < arr.length; i++){
+        if (cs > arr[i] && cs <= arr[i+1] && ls-cs < 0) {
+            window.scroll({top:arr[i+1]})
+            ls = window.pageYOffset;
+            break
+        } else if (cs > arr[i] && cs <= arr[i+1] && ls-cs > 0) {
+            if (arr[i-1] == undefined) {
+                window.scroll({top:0})
+            } else {
+                window.scroll({top:arr[i]})
+            }
+            ls = window.pageYOffset;
+            scroll.style.transition = 'all 20s';
+            break
+        }
+    }
+});
+
+
+//부드럽게 애플처럼
+
+
 
 //home
 var carousel = document.getElementById('home__carousel');
 var slides = 3;
-var speed = 7000; // 5 seconds
+var speed = 3000; // 5 seconds
 
 function carouselHide(num) {
     indicators[num].setAttribute('data-state', '');
@@ -398,9 +442,38 @@ function translateContainer(direction){
   container.style.transitionDuration = '300ms';
   container.style.transform = `translateX(${direction * (100 / 10)}%)`;
   container.ontransitionend = () => reorganizeEl(selectedBtn);
+
 }
 
 function reorganizeEl(selectedBtn) {
   container.removeAttribute('style');
   (selectedBtn === '.before__btn') ? container.insertBefore(container.lastElementChild, container.firstElementChild): container.appendChild(container.firstElementChild);
 }
+
+
+
+
+//infinet roof
+
+function move(){
+
+  var curIndex = 0;
+
+  setInterval(function(){
+      container.style.transition = 'all 10s easy-in-out';
+      container.style.transform = "translate3d(-"+200*(curIndex+1)+"px, 0px, 0px)";
+
+      curIndex++;
+
+      if(curIndex === 4){
+          curIndex = -1;
+      }
+
+      reorganizeEl();
+
+  },2000);
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+  move();
+});

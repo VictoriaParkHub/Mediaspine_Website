@@ -111,6 +111,21 @@
   }
 
 
+  /* fade-in, out */
+.fade-class {
+  position: relative;
+  left: 200px;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+}
+
+
+
 
 /*Navbar*/
 #nav{
@@ -302,16 +317,16 @@
 }
 
 .home__item:nth-child(1) {
-  background: no-repeat url(../Mediaspine_Website/img/home01.jpg);
+  background: no-repeat url(img/home01.jpg);
   opacity: 1;
 }
 
 .home__item:nth-child(2) {
-  background: no-repeat url(../Mediaspine_Website/img/home02.jpg);
+  background: no-repeat url(img/home02.jpg);
 }
 
 .home__item:nth-child(3) {
-  background: no-repeat url(../Mediaspine_Website/img/home03.jpg);
+  background: no-repeat url(img/home03.jpg);
 }
 
 .home__item[data-state=active] {
@@ -401,7 +416,7 @@
   text-align: center;
 }
 .display__title{
-  padding-top: 200px;
+  padding-top: 100px;
 }
 .display__description{
   padding-top: 30px;
@@ -636,7 +651,7 @@
 }
 
 .solution__title{
-  padding-top: 200px;
+  padding-top: 150px;
   text-align: center;
 }
 
@@ -694,7 +709,7 @@
   display: block;
   width: 82px;
   height: 82px;
-  background-image: url(../Mediaspine_Website/img/good.png);
+  background-image: url(/img/good.png);
   position: absolute;
   top: -40px;
   right: 0px;
@@ -796,22 +811,22 @@
 
 /*각각 다른 배경이미지*/
 .gallery__container .gallery:nth-of-type(1) div:first-child{
-  background: no-repeat url(../Mediaspine_Website/img/content01.jpg);
+  background: no-repeat url(img/content01.jpg);
   background-size: cover;
 }
 
 .gallery__container .gallery:nth-of-type(2) div:first-child{
-  background: no-repeat url(../Mediaspine_Website/img/content02.jpg);
+  background: no-repeat url(img/content02.jpg);
   background-size: cover;
 }
 
 .gallery__container .gallery:nth-of-type(3) div:first-child{
-  background: no-repeat url(../Mediaspine_Website/img/content03.jpg);
+  background: no-repeat url(img/content03.jpg);
   background-size: cover;
 }
 
 .gallery__container .gallery:nth-of-type(4) div:first-child{
-  background: no-repeat url(../Mediaspine_Website/img/content04.jpg);
+  background: no-repeat url(img/content04.jpg);
   background-size: cover;
 }
 
@@ -826,7 +841,7 @@
 
 .system__title{
   text-align: center;
-  padding-top: 200px;
+  padding-top: 150px;
   /*outline: 1px solid red;*/
 }
 
@@ -883,7 +898,7 @@
   position: absolute;
   top: 40%;
   left: 13%;
-  background: no-repeat url(../Mediaspine_Website/img/check_btn.png);
+  background: no-repeat url(img/check_btn.png);
 }
 
 .system__right{
@@ -991,7 +1006,7 @@
   left: -60px;
   width: 40px;
   height: 40px;
-  background-image:url(../Mediaspine_Website/img/before_btn.png);
+  background-image:url(img/before_btn.png);
 }
 .before__btn em{
   display: none;
@@ -1004,7 +1019,7 @@
   right: -60px;
   width: 40px;
   height: 40px;
-  background-image:url(../Mediaspine_Website/img/after_btn.png);
+  background-image:url(img/after_btn.png);
 }
 .after__btn em{
   display: none;

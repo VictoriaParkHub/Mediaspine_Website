@@ -137,50 +137,77 @@
   };
 
 
+//Scroll Fade-in, out
+
+const targets = document.querySelectorAll(".fade-class");
+const options = { root: null, threshold: 0.1, rootMargin: "-0px" };
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    const container = entry.target;
+    if (entry.isIntersecting) {
+      container.classList.add("fade-in");
+    } else {
+      container.classList.remove("fade-in");
+    }
+  });
+}, options);
+
+targets.forEach((target) => {
+  observer.observe(target);
+});
+
 
 
 window.onload = function () {
 
 
-//scroll하면 한 section씩 이동하는 효과
+//scroll snap event - Crome
 
+const elm = document.querySelectorAll('.scroll');
+const elmCount = elm.length;
 
-var q = document.getElementsByClassName('scroll')
-var ls = window.pageYOffset;
-var arr = [];
-for (var i=0; i<q.length; i++){
-    arr.push(q[i].offsetTop)
-}
+//chrome
+elm.forEach(function(item, index){
+  item.addEventListener('mousewheel', function(event){
+    event.preventDefault();
+    let delta = 0;
 
-window.addEventListener('resize', function() {
-    arr = [];
-    for (var i=0; i<q.length; i++){
-        arr.push(q[i].offsetTop)
+    if (!event) event = window.event;
+    if (event.wheelDelta) {
+        delta = event.wheelDelta / 120;
+        if (window.opera) delta = -delta;
+    } 
+    else if (event.detail)
+        delta = -event.detail / 3;
+
+    let moveTop = window.scrollY;
+    let elmSelector = elm[index];
+
+    // wheel down : move to next section
+    if (delta < 0){
+      if (elmSelector !== elmCount-1){
+        try{
+          moveTop = window.pageYOffset + elmSelector.nextElementSibling.getBoundingClientRect().top;
+        }catch(e){}
+      }
     }
-})
-
-document.addEventListener('scroll', function() {
-    var cs = window.pageYOffset;
-    for (var i=0; i < arr.length; i++){
-        if (cs > arr[i] && cs <= arr[i+1] && ls-cs < 0) {
-            window.scroll({top:arr[i+1]})
-            ls = window.pageYOffset;
-            break
-        } else if (cs > arr[i] && cs <= arr[i+1] && ls-cs > 0) {
-            if (arr[i-1] == undefined) {
-                window.scroll({top:0})
-            } else {
-                window.scroll({top:arr[i]})
-            }
-            ls = window.pageYOffset;
-            scroll.style.transition = 'all 20s';
-            break
-        }
+    // wheel up : move to previous section
+    else{
+      if (elmSelector !== 0){
+        try{
+          moveTop = window.pageYOffset + elmSelector.previousElementSibling.getBoundingClientRect().top;
+        }catch(e){}
+      }
     }
+
+    const body = document.querySelector('html');
+    window.scrollTo({top:moveTop, left:0, behavior:'smooth'});
+  });
+
 });
 
 
-//부드럽게 애플처럼
+
 
 
 

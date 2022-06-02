@@ -746,10 +746,11 @@
   padding-top: 200px;
 }
 .contents__title{
-  width: 270px;
-  margin-left: 10%;
-  margin-right: 80px;
+  width: 400px;
+  margin-left: 8%;
+  margin-right: 10px;
 }
+
 .gallery__container{
   display: flex;
   width: 100%;

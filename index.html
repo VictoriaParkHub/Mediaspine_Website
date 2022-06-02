@@ -2,61 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="title" content="이 문서의 제목은 (주)미디어스파인 회사 웹페이지 :  mediaspine company webpage입니다." />
+    <meta name="keywords" content="DID, LCD, 디스플레이, display, 운영대행, 유지보수, 전광판, LED" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주)미디어스파인</title>
     <meta
         name="description"
-        content="Project for Mediaspine" />
+        content="Project For Mediaspine" />
     <meta
         name="author"
         content="Mediaspine" />
-    <link rel="icon" type="image/png" href="imgs/favicon.jpg" />
-    <script
-        src="https://kit.fontawesome.com/9befce0679.js"
-        crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="icon" type="image/png" href="css/img/logoicon.jpg" />
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/includeHTML.js"></script>
 </head>
 <body>
     <!--Nav-->
-    <nav id="nav">
-        <div class="nav__logo">
-            <img id="logo" src="img/logo.png" alt="logo">
-        </div>
-        <div class="nav__menu">
-            <ul class="nav__menu__container" onmouseover="return mouseOver();" onmouseout="return mouseOut();">
-                <li class="nav__menu__item"><a id="mainmenu" href="#">디스플레이 운영관리</a></li>
-                <li class="nav__menu__item"><a id="mainmenu" href="#">솔루션</a>
-                    <ul class="nav__submenu__container">
-                        <li class="nav__submenu__item"><a href="#">빌딩안내(DID PLUS)</a></li>
-                        <li class="nav__submenu__item"><a href="#">회의 예약・안내(MEET PLUS)</a></li>
-                        <li class="nav__submenu__item"><a href="#">콘텐츠 개발</a></li>
-                    </ul>
-                </li>
-                <li class="nav__menu__item"><a id="mainmenu" href="#">시스템 구축</a>
-                    <ul class="nav__submenu__container">
-                        <li class="nav__submenu__item"><a href="#">빌딩안내</a></li>
-                        <li class="nav__submenu__item"><a href="#">회의 예약・안내</a></li>
-                        <li class="nav__submenu__item"><a href="#">통합 모니터링</a></li>
-                        <li class="nav__submenu__item"><a href="#">에너지현황 디스플레이</a></li>
-                    </ul>
-                </li>
-                <li class="nav__menu__item"><a id="mainmenu" href="#">회사소개</a>
-                    <ul class="nav__submenu__container">
-                        <li class="nav__submenu__item"><a href="#">인사말</a></li>
-                        <li class="nav__submenu__item"><a href="#">회사 연혁</a></li>
-                        <li class="nav__submenu__item"><a href="#">회사 인증서</a></li>
-                        <li class="nav__submenu__item"><a href="#">협력사</a></li>
-                        <li class="nav__submenu__item"><a href="#">오시는 길</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="nav__submenu__bg"></div>
-        </div>
-        <button class="nav__menu__lastitem"><a class="contactbtn" href="#">문의하기</a></button>
-    </nav>
+    <nav include-html="nav.html"></nav>
 
     <!--Home-->
     <section id="home" class="scroll">
@@ -161,7 +124,7 @@
         </div>
         <div class="item__container">
             <div class="item oneclick fadein">
-                <img src="img/display01.jpg" alt="일대일 운영관리 이미지">
+                <img src="css/img/display01.jpg" alt="일대일 운영관리 이미지">
                 <p>운영담당자가 화면구성 디자인부터 동작/장애 모니터링까지 일대일로 관리합니다.</p>
                 <div class="more__btn">
                     <a href="#"
@@ -172,7 +135,7 @@
                 </div>
             </div>
             <div class="item twoclick fadein">
-                <img src="img/display02.jpg" alt="맞춤형 콘텐츠 이미지">
+                <img src="css/img/display02.jpg" alt="맞춤형 콘텐츠 이미지">
                 <p>고객사를 위한 다양하고도 즐거운 콘텐츠를 제작 및 제공합니다.</p>
                 <div class="more__btn">
                     <a href="#"
@@ -183,7 +146,7 @@
                 </div>
             </div>
             <div class="item threeclick fadein">
-                <img src="img/display03.jpg" alt="모니터링 이미지">
+                <img src="css/img/display03.jpg" alt="모니터링 이미지">
                 <p>꾸준한 유지관리로 화면 장애 발생과 바이러스 및 OS원격상태를 체크합니다.</p>
                 <div class="more__btn">
                     <a href="#"
@@ -194,7 +157,7 @@
                 </div>
             </div>
             <div class="item fourclick fadein">
-                <img src="img/display04.jpg" alt="디바이스 원격지원 이미지">
+                <img src="css/img/display04.jpg" alt="디바이스 원격지원 이미지">
                 <p>담당자가 원격으로 모니터링하여 스케줄 편성등의 작업이 효율적이며 인건비가 절감됩니다.</p>
                 <div class="more__btn">
                     <a href="#"
@@ -213,7 +176,7 @@
             <ul class="solution__container">
                 <li>
                     <div class="solution__img">
-                        <img src="img/Solution01.jpg" alt="DID Plus Local">
+                        <img src="css/img/Solution01.jpg" alt="DID Plus Local">
                     </div>
                     <div class="solution__font">
                         <h2 class="container__title">DID PLUS</h2>
@@ -232,7 +195,7 @@
                 </li>
                 <li>
                     <div class="solution__img">
-                        <img src="img/Solution02.jpg" alt="DID Plus Web">
+                        <img src="css/img/Solution02.jpg" alt="DID Plus Web">
                     </div>
                         <div class="solution__font">
                         <h2 class="container__title">DID PLUS</h2>
@@ -251,7 +214,7 @@
                 </li>
                 <li>
                     <div class="solution__img">
-                        <img src="img/Solution03.jpg" alt="DID plus">
+                        <img src="css/img/Solution03.jpg" alt="DID plus">
                     </div>
                     <div class="solution__font">
                         <h2 class="container__title">MEET PLUS</h2>
@@ -372,13 +335,12 @@
             </div>
             <div class="system__right">
                 <div class="right__item oneclick2 fadein">
-                    <img src="img/system01.jpg" alt="빌딩안내 이미지">
+                    <img src="css/img/system01.jpg" alt="빌딩안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">빌딩안내</h2>
                         <p class="right__description">
-                            건물 내방객 또는 직원들에게<br />
-                            층 안내, 대기 정보, 증권 정보, 신속한 상황 공유 등<br />
-                            다양한 정보를 시각적으로 전달하는 시스템입니다.
+                            건물 내방객 또는 직원들에게 층 안내, 대기 정보, 증권 정보,<br />
+                            신속한 상황 공유 등 다양한 정보를 시각적으로 전달하는 시스템입니다.
                         </p>
                         <div class="more__btn">
                             <a href="#"
@@ -390,13 +352,12 @@
                     </div>
                 </div>
                 <div class="right__item twoclick2 fadein">
-                    <img src="img/system02.jpg" alt="회의 예약・안내 이미지">
+                    <img src="css/img/system02.jpg" alt="회의 예약・안내 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">회의 예약・안내</h2>
                         <p class="right__description">
-                            건물 내 회의실을 통합으로 관리하는 시스템으로<br />
-                            실시간 회의실 예약/관리를 도와주어<br />
-                            편리한 회의 운영환경을 제공합니다.
+                            건물 내 회의실을 통합으로 관리하는 시스템으로 실시간 회의실 예약/관리를<br />
+                            도와주어 편리한 회의 운영환경을 제공합니다.
                         </p>
                         <div class="more__btn">
                             <a href="#"
@@ -408,13 +369,12 @@
                     </div>
                 </div>
                 <div class="right__item threeclick2 fadein">
-                    <img src="img/system03.jpg" alt="통합 모니터링 이미지">
+                    <img src="css/img/system03.jpg" alt="통합 모니터링 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">통합 모니터링</h2>
                         <p class="right__description">
-                            통합관제센터 내 다양한 설비 시스템 운영화면을<br />
-                            고객사가 원하는 디자인으로 커스터마이징하여<br />
-                            일괄적으로 모니터링 할 수 있도록 구성하는 시스템입니다.
+                            통합관제센터 내 설비 시스템 운영화면을 고객사가 원하는 디자인으로<br />
+                            커스터마이징하여 모니터링 할 수 있도록 구성하는 시스템입니다.
                         </p>
                         <div class="more__btn">
                             <a href="#"
@@ -426,12 +386,11 @@
                     </div>
                 </div>
                 <div class="right__item fourclick2 fadein">
-                    <img src="img/system04.jpg" alt="에너지현황 디스플레이 이미지">
+                    <img src="css/img/system04.jpg" alt="에너지현황 디스플레이 이미지">
                     <div class="right__item__content">
                         <h2 class="right__title">에너지현황 디스플레이</h2>
                         <p class="right__description">
-                            건물 내의 다양한 에너지 현황을<br />
-                            (각종 설비/전력량/수도 사용량/태양광 등)<br />
+                            건물 내의 다양한 에너지 현황을 (각종 설비/전력량/수도 사용량/태양광 등)<br />
                             데이터 연동을 통해 표출하는 시스템입니다.
                         </p>
                         <div class="more__btn">
@@ -453,52 +412,52 @@
         <div class="reference__window">
             <ul class="reference__container">
                 <li class="reference__item">
-                    <img src="img/reference01.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference01.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">1. 멀티비전</h2>
                     <p class="reference__item__description">대교</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference02.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference02.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">2. 빌딩안내</h2>
                     <p class="reference__item__description">센트로폴리스</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference03.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference03.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">3. 에너지현황</h2>
                     <p class="reference__item__description">한국전력</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference04.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference04.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">4. 통합모니터링</h2>
                     <p class="reference__item__description">SC제일은행</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference05.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference05.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">5. 멀티비전</h2>
                     <p class="reference__item__description">경기광주역</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference06.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference06.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">6. 멀티비전</h2>
                     <p class="reference__item__description">대교</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference07.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference07.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">7. 빌딩안내</h2>
                     <p class="reference__item__description">센트로폴리스</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference08.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference08.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">8. 에너지현황</h2>
                     <p class="reference__item__description">한국전력</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference09.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference09.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">9. 통합모니터링</h2>
                     <p class="reference__item__description">SC제일은행</p>
                 </li
                 ><li class="reference__item">
-                    <img src="img/reference10.jpg" alt="설치사례 이미지">
+                    <img src="css/img/reference10.jpg" alt="설치사례 이미지">
                     <h2 class="reference__item__title">10. 멀티비전</h2>
                     <p class="reference__item__description">경기광주역</p>
                 </li
@@ -511,49 +470,11 @@
             <em class="behind">이후</em>
         </button>
     </section>
-
-    <!--contact-->
-    <section id="contact" class="scroll fade-class">
-        <div class="contact__container">
-            <img src="img/contact.jpg" alt="문의하세요 이미지">
-            <div class="contact__right">
-                <h1 class="contact__title">무엇이든 물어보세요.</h1>
-                <p class="contact__description">
-                    궁금한 사항에 대해 문의주시면<br />
-                    미디어스파인이 정성껏 답변하겠습니다.
-                </p>
-                <div class="more__btn">
-                    <a href="#"
-                    data-title="문의하기 자세히보기"
-                    title="레이어 팝업 열림">
-                        <span>자세히보기</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!--footer-->
-    <footer id="footer">
-        <div class="footer__container">
-            <div class="footer__left">
-                <ul>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">서비스이용약관</a></li>
-                    <li><a href="#">이메일무단수집거부</a></li>
-                    <li><a href="#">아이디어정책</a></li>
-                </ul>
-                <address class="footer__address">
-                    서울특별시 금천구 가산디지털1로 30, 509호(에이스하이엔드타워10차)<br />
-                    509 Ho, 30, Gasan digital 1-ro, Geumcheon-gu, Seoul, Republic of Korea(08591)
-                </address>
-                <p class="footer__rights">ⓒ All Rights Reserved by Mediaspine.</p>
-            </div>
-            <div class="footer__right">
-                <p class="footer__phone">☎ 02) 2622-8522</p>
-            </div>
-        </div>
-    </footer>
+    <footer include-html="footer.html"></footer>
+
+    <!-- Scripts -->
+    <script>includeHTML();</script>
+    <script type="text/javascript" src="js/main.js" defer></script>
 </body>
 </html>

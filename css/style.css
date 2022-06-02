@@ -55,6 +55,7 @@
   body {
     cursor: default;
     font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
   }
   
   a {
@@ -123,166 +124,6 @@
   left: 0px;
   opacity: 1;
 }
-
-
-
-
-/*Navbar*/
-#nav{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  height: 80px;
-  z-index: 1;
-  transition:.5s;
-  border-bottom:1px solid #7c7c7c71;
-}
-
-/*logo와 menu를 플렉스해서 flex-basis로 자리차지*/
-.nav__logo{
-  text-align: right;
-  width: 220px;
-  height: 35px;
-  flex-basis: 17%;
-  margin-top: 20px;
-  margin-right: 50px;
-}
-.nav__menu{
-  flex-basis: 70%;
-}
-
-/*메인 메뉴*/
-.nav__menu__container{
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-.nav__menu__item{
-  width: 100%;
-  text-align: center;
-}
-
-#mainmenu{
-  display: block;
-  color: white;
-  width: 60%;
-  height: 100%;
-  line-height: 80px;
-  margin: 0 auto;
-  font-weight: var(--weight-semi-bold);
-  font-size: var(--font-semi-regular);
-}
-
-.nav__menu__item:hover #mainmenu{
-  border-bottom:1px solid #0065e9;
-  color: #0065e9 !important;
-  font-weight: var(--weight-bold);
-  transition: all 0.3s;
-}
-
-/*서브 메뉴*/
-.nav__submenu__container{
-  display: none;
-  padding-top: 10px;
-}
-.nav__submenu__item{
-  height: 40px;
-  line-height: 40px;
-}
-
-.nav__submenu__item a{
-  font-size: 16px;
-}
-
-.nav__submenu__item a:hover{
-  color: #0065e9;
-}
-
-.nav__submenu__bg{
-  width: 100%;
-  height: 310px;
-  background-color: white;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  visibility: hidden;
-  border-bottom:1px solid #7c7c7c71;
-}
-
-
-/*문의하기 버튼*/
-
-.nav__menu__lastitem{
-  flex-basis: 13%;
-}
-.contactbtn{
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  display: block;
-  width: 135px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  margin: 0 auto;
-  color: black;
-  background-color: #FFFFFF;
-  border-radius: .2rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-}
-
-.contactbtn:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.contactbtn:focus-visible {
-  box-shadow: none;
-}
-
-.contactbtn:hover{
-  background-color: #3086f6;
-  color: white;
-  transition: all 0.3s;
-}
-
-/*문의하기 버튼 2*/
-.contactbtn2{
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  display: block;
-  width: 135px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  margin: 0 auto;
-  color: white;
-  background-color: #3086f6;
-  border-radius: .2rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-}
-
-.contactbtn2:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.contactbtn2:focus-visible {
-  box-shadow: none;
-}
-
-.contactbtn2:hover{
-  background-color: #b1db53;
-  color: #000000;
-  transition: all 0.3s;
-}
-
 
 
 
@@ -709,7 +550,7 @@
   display: block;
   width: 82px;
   height: 82px;
-  background-image: url(/img/good.png);
+  background-image: url(img/good.png);
   position: absolute;
   top: -40px;
   right: 0px;
@@ -943,7 +784,7 @@
 }
 
 .right__title{
-  margin-top: 40px;
+  margin-top: 55px;
 }
 
 .right__description{
@@ -1048,84 +889,5 @@
   /*outline: 1px solid pink;*/
 }
 
-/*contact*/
-#contact{
-  height: 700px;
-  background-color: #f3f3f8;
-  /*outline: 1px solid red;*/
-}
-
-.contact__container{
-  padding-top: 150px;
-  display: flex;
-}
-.contact__container img{
-  display: block;
-  height: 470px;
-  width: 50%;
-  text-align: center;
-  line-height: 470px;
-  /*outline: 1px solid red;*/
-}
-.contact__right{
-  padding-left: 10%;
-  /*outline: 1px solid red;*/
-}
-.contact__title{
-  padding-top: 140px;
-  /*outline: 1px solid red;*/
-}
-.contact__description{
-  padding-top: 30px;
-  /*outline: 1px solid red;*/
-}
-
-.contact__description+div.more__btn{
-  margin-top: 40px;
-}
-
-/*footer*/
-#footer{
-  height: 240px;
-  background-color: black;
-  color: white;
-  /*outline: 1px solid red;*/
-}
-#footer p{
-  color: white;
-}
-
-.footer__container{
-  max-width: 1400px;
-  display: flex;
-  padding-top: 30px;
-  margin: 0 auto;
-  /*outline: 1px solid red;*/
-}
-.footer__left{
-  flex-basis: 85%;
-  /*outline: 1px solid red;*/
-}
-
-.footer__left ul{
-  display: flex;
-}
-.footer__left ul li{
-  margin-right: 20px;
-}
-.footer__left ul li a{
-  color: white;
-}
-.footer__address{
-  padding-top: 70px;
-}
-.footer__rights{
-  padding-top: 15px;
-  color: var(--color-light-grey) !important;
-}
-.footer__right{
-  flex-basis: 15%;
-  /*outline: 1px solid red;*/
-}
 
 

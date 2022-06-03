@@ -17,6 +17,7 @@
   
     /*Font-size*/
     --font-biglarge:60px;
+    --font-smalllarge:45px;
     --font-large: 35px;
     --font-medium: 25px;
     --font-semi-regular: 18px;
@@ -123,4 +124,150 @@
   transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
   left: 0px;
   opacity: 1;
+}
+
+
+/*header*/
+#header{
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e5;
+}
+.header__wrap{
+  max-width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title{
+  padding-top: 100px;
+  font-size: var(--font-smalllarge);
+}
+.header__nav{
+  margin-top: 80px;
+  height: 55px;
+  line-height: 55px;
+  display: flex;
+}
+.header__menu{
+  border: 1px solid #e1e1e5;
+  flex-grow: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header__menu a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.subactive{
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+}
+.subactiveA{
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+
+
+/*공통된 title과 description*/
+.sub__title{
+  text-align: center;
+  padding-top: 100px;
+}
+.sub__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+/*디스플레이 운영관리 소개*/
+#dsInformation{
+  height: 780px;
+  outline: 1px solid red;
+}
+.dsInformation__img{
+  width: 920px;
+  height: 285px;
+  outline: 1px solid red;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.sub__paragraph{
+  text-align: center;
+  margin-top: 20px;
+}
+.sub__paragraph span{
+  font-weight: var(--weight-bold);
+  color: black;
+}
+
+
+/*디스플레이 서비스 구분*/
+#dsDivide{
+  background-color: #f3f3f8;
+  height: 1080px;
+}
+.dsDivide__wrap{
+  max-width: 1260px;
+  height: 550px;
+  outline: 1px solid;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+}
+.dsDivide__container{
+  outline: 1px solid red;
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  position: relative;
+}
+.dsDivide__img{
+  width: 100%;
+  height: 200px;
+  display: block;
+  outline: 1px solid blue;
+}
+.dsDivide__title{
+  width: 360px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 50px;
+  color: white;
+  background-color: #3086f6;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  z-index: 3;
+  position: absolute;
+  top: 160px;
+  left: 20%;
+}
+.dsDivide__title i{
+  margin-right: 20px;
+  font-size: 30px;
+}
+.dsDivide__smallConatiner{
+  padding-top: 80px;
+  outline: 1px solid;
+  height: 350px;
+  background-color: white;
+}
+.dsDivide__item{
+  width: 400px;
+  height: 60px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid #3086f6;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.075), 0 10px 10px rgba(0, 0, 0, 0.034);
 }

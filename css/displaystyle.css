@@ -20,7 +20,7 @@
     --font-smalllarge:45px;
     --font-large: 35px;
     --font-medium: 25px;
-    --font-semi-regular: 18px;
+    --font-semi-regular: 20px;
     --font-regular: 17px;
     --font-small: 14px;
     --font-micro: 12px;
@@ -211,7 +211,7 @@
 /*디스플레이 서비스 구분*/
 #dsDivide{
   background-color: #f3f3f8;
-  height: 1080px;
+  height: 1000px;
 }
 .dsDivide__wrap{
   max-width: 1260px;
@@ -270,4 +270,127 @@
   margin: 0 auto;
   margin-bottom: 20px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.075), 0 10px 10px rgba(0, 0, 0, 0.034);
+}
+
+/*디스플레이 유지관리 작업순서*/
+#dsProcedure{
+  height: 1000px;
+}
+.dsProcedure__wrap{
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.dsProcedure__container{
+  display: flex;
+}
+.dsProcedure__item{
+  width: 100%;
+  flex-basis: auto;
+  position: relative;
+}
+
+.dsProcedure__img{
+  display: block;
+  width: 247px;
+  height: 247px;
+  text-align: center;
+  line-height: 247px;
+  margin: 0 auto;
+}
+.dsProcedure__title{
+  text-align: center;
+  font-weight: var(--weight-semi-bold);
+  font-size: var(--font-semi-regular);
+  margin-top: 30px;
+}
+.dsProcedure__description{
+  text-align: center;
+  font-size: var(--font-semi-regular);
+  margin-top: 10px;
+}
+
+/*화살표*/
+.dsProcedure__container li:nth-child(1)::after{
+  content: " ";
+  display: block;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  top: 25%;
+  right: -43px;
+  background: url(img/dsProcedurearrow.png);
+}
+.dsProcedure__container li:nth-child(2)::after{
+  content: " ";
+  display: block;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  top: 25%;
+  right: -43px;
+  background: url(img/dsProcedurearrow.png);
+}
+.dsProcedure__container li:nth-child(3)::after{
+  content: " ";
+  display: block;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  top: 25%;
+  right: -43px;
+  background: url(img/dsProcedurearrow.png);
+}
+
+/*화면 구성 예시*/
+#dsInterface{
+  height: 1000px;
+  outline: 1px solid red;
+}
+
+.dsInterface__wrap{
+  outline: 1px solid;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 100px;
+}
+.dsInterface__left{
+  outline: 1px solid;
+  width: 100%;
+}
+.dsInterface__right{
+  outline: 1px solid;
+  width: 100%;
+}
+
+.dsInterface__title{
+  outline: 1px solid;
+  height: 50px;
+  line-height: 50px;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+.dsInterface__title::before{
+  content: " ";
+  display: block;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  top: 25%;
+  right: -43px;
+  background: url(img/dsInterfaceimgcheck.png);
+}
+
+.dsInterface__container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 660px;
+}
+.dsInterface__img{
+  display: block;
+  outline: 1px solid red;
+  width: 320px;
+  height: 240px;
+  padding: 10px;
 }

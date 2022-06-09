@@ -1,0 +1,322 @@
+/*Global*/
+:root {
+    /*Color*/
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #5e5e5e;
+    --color-light-grey: #7c7979;
+    --color-blue: #0065e9;
+    --color-skyblue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /*Font-size*/
+    --font-biglarge:60px;
+    --font-smalllarge:45px;
+    --font-large: 35px;
+    --font-medium: 25px;
+    --font-semi-regular: 20px;
+    --font-regular: 17px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  
+    /*Font-weight*/
+    --weight-bold: 700;
+    --weight-close-bold: 600;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+    --weight-thin: 200;
+  
+    /*Radius*/
+    --size-border-radius: 50%;
+  }
+
+  /*Universal tags*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+  }
+  
+  body {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    font-size: var(--font-regular);
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-close-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+    color: var(--color-grey);
+  }
+
+
+  /* fade-in, out */
+.fade-class {
+  position: relative;
+  left: 200px;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+}
+
+
+/*header*/
+#header{
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e5;
+  background: no-repeat url(img/displayheader.png) ;
+}
+.header__wrap{
+  max-width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title{
+  padding-top: 100px;
+  font-size: var(--font-smalllarge);
+  color: white;
+}
+.header__nav{
+  margin-top: 80px;
+  height: 55px;
+  line-height: 55px;
+  display: flex;
+}
+.header__menu{
+  border: 1px solid #e1e1e5;
+  background-color: white;
+  flex-grow: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header__menu a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.subactive{
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+}
+.subactiveA{
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+
+
+/*공통된 title과 description*/
+.sub__title{
+  text-align: center;
+  padding-top: 100px;
+}
+.sub__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*주요실적 보기 버튼*/
+.reference__btn{
+    display: block;
+    color: white;
+    cursor: pointer;
+    background: #1462ff;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px -10px #4a74c9;
+    width: 220px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: var(--font-semi-regular);
+    margin-top: 50px;
+    position: relative;
+    text-indent: -10px;
+  }
+  .reference__btn::after{
+    content: ">";
+    font-size: var(--font-semi-regular);
+    font-weight: var(--weight-bold);
+    color: white;
+    position: absolute;
+    right: 30px;
+  }
+  
+  .reference__btn:hover{
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /*회의 예약·안내 시스템 소개*/
+  #crrsInformation{
+    height: 650px;
+  }
+
+  .crrsInformation__img{
+    margin-top: 20px;
+  }
+  .crrsInformation__paragraph{
+    color: white;
+    text-align: center;
+    margin-top: -265px;
+  }
+  .crrsInformation__paragraph span{
+    font-weight: var(--weight-bold);
+    color: white;
+  }
+
+  /*회의 예약·안내 시스템 구성*/
+  #crrsConfiguration{
+    background-color: #f3f3f8;
+    height: 1000px;
+  }
+#crrsConfiguration h1{
+  padding-top: 150px;
+}
+
+  .crrsConfiguration__img{
+    display: block;
+    width: 1160px;
+    height: 544px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .sub__paragraph{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /*회의 예약·안내 주요기기*/
+  #crrsInstrument{
+    height: 1000px;
+  }
+
+  #crrsInstrument h1{
+    padding-top: 150px;
+  }
+  .crrsInstrument__container{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 500px;
+  }
+  .crrsInstrument__item{
+    outline: 1px solid #cdcdcd;
+    width: 100%;
+    margin: 20px;
+    position: relative;
+  }
+  .crrsInstrument__title{
+    background-color: #5f5f79;
+    color: white;
+    position: absolute;
+    top: -10px;
+    width: 310px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 21px;
+    font-weight: var(--weight-semi-bold);
+  }
+
+  .crrsInstrument___img{
+    display: block;
+    width: 170px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  /*안에있는 ul*/
+  .crrsInstrument__smallContainer{
+    width: 280px;
+    height: 155px;
+    background-color: #f4f3f9;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .crrsInstrument__smallitem{
+    width: 210px;
+    list-style-type: disc;
+    margin: 0 auto;
+    padding-left: 5px;
+  }
+  .crrsInstrument__smallContainer li:nth-child(1){
+    padding-top: 23px;
+  }

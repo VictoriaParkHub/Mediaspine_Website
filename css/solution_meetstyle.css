@@ -133,7 +133,7 @@
   height: 300px;
   width: 100%;
   border-bottom: 1px solid #e1e1e5;
-  background: no-repeat url(img/systemheader.png) ;
+  background: no-repeat url(img/solutionheader.png) ;
 }
 .header__wrap{
   max-width: 1400px;
@@ -224,105 +224,84 @@
     transition: all 0.2s ease-in-out;
   }
 
-  /*회의 예약·안내 시스템 소개*/
-  #crrsInformation{
+  
+  /*MEET PLUS 시스템 소개*/
+  #meetInformation{
     height: 650px;
   }
 
-  .crrsInformation__img{
+  .meetInformation__img{
     margin-top: 20px;
   }
-  .crrsInformation__paragraph{
+  .meetInformation__paragraph{
     color: white;
     text-align: center;
     margin-top: -265px;
   }
-  .crrsInformation__paragraph span{
+  .meetInformation__paragraph span{
     font-weight: var(--weight-bold);
     color: white;
   }
 
-  /*회의 예약·안내 시스템 구성*/
-  #crrsConfiguration{
+  /*MEET PLUS가 필요한 순간*/
+  #meetMoment{
+      height: 1000px;
+  }
+  .meetMoment__container{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+
+  .meetMoment__left{
+      width: 100%;
+      height: 100%;
+  }
+  .meetMoment__left:first-child li+li{
+    margin-top: -30px;
+  }
+
+  .meetMoment__item{
+      background: no-repeat url(img/bubblespeach.png);
+      width: 700px;
+      height: 206px;
+      line-height: 180px;
+      text-align: center;
+      font-size: var(--font-semi-regular);
+      color: #5e5e5e;
+  }
+  .meetMoment__item span{
+      font-weight: var(--weight-bold);
+      color: black;
+  }
+
+  .meetMoment__right{
+      display: block;
+      width: 478px;
+      height: 522px;
+      object-fit: cover;
+      margin: 0 auto;
+  }
+
+  /*MEET PLUS 솔루션 기능*/
+  #meetFunction{
     background-color: #f3f3f8;
     height: 1000px;
   }
-#crrsConfiguration h1{
-  padding-top: 150px;
-}
-
-  .crrsConfiguration__img{
-    display: block;
-    width: 1160px;
-    height: 544px;
-    margin: 0 auto;
-    margin-top: 20px;
+  .meetFunction__container{
+      outline: 1px solid red;
   }
-  .sub__paragraph{
-    text-align: center;
-    margin-top: 10px;
+  .meetFunction__item{
+      outline: 1px solid red;
   }
-
-  /*회의 예약·안내 주요기기*/
-  #crrsInstrument{
-    height: 1000px;
+  .meetFunction__title{
+      outline: 1px solid red;
   }
-
-  #crrsInstrument h1{
-    padding-top: 150px;
+  .meetFunction__description{
+      outline: 1px solid red;
   }
-  .crrsInstrument__container{
-    display: flex;
-    max-width: 1400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    height: 500px;
-  }
-  .crrsInstrument__item{
-    outline: 1px solid #cdcdcd;
-    width: 100%;
-    margin: 20px;
-    position: relative;
-  }
-  .crrsInstrument__title{
-    background-color: #5f5f79;
-    color: white;
-    position: absolute;
-    top: -10px;
-    width: 310px;
-    text-align: center;
-    height: 60px;
-    line-height: 60px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    font-size: 21px;
-    font-weight: var(--weight-semi-bold);
-  }
-
-  .crrsInstrument___img{
-    display: block;
-    width: 170px;
-    height: 140px;
-    margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    text-align: center;
-  }
-
-  /*안에있는 ul*/
-  .crrsInstrument__smallContainer{
-    width: 280px;
-    height: 155px;
-    background-color: #f4f3f9;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
-  .crrsInstrument__smallitem{
-    width: 210px;
-    list-style-type: disc;
-    margin: 0 auto;
-    padding-left: 5px;
-  }
-  .crrsInstrument__smallContainer li:nth-child(1){
-    padding-top: 23px;
+  .meetFunction__img{
+      outline: 1px solid red;
+      
   }

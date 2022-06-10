@@ -171,6 +171,12 @@
   color: #3086f6;
   font-weight: var(--weight-bold);
 }
+.header__menu:hover {
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
 
 
 /*공통된 title과 description*/

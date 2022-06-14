@@ -1,0 +1,461 @@
+/*Global*/
+:root {
+    /*Color*/
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #5e5e5e;
+    --color-light-grey: #7c7979;
+    --color-blue: #0065e9;
+    --color-skyblue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /*Font-size*/
+    --font-biglarge:60px;
+    --font-smalllarge:45px;
+    --font-large: 35px;
+    --font-medium: 25px;
+    --font-semi-regular: 20px;
+    --font-regular: 17px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  
+    /*Font-weight*/
+    --weight-bold: 700;
+    --weight-close-bold: 600;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+    --weight-thin: 200;
+  
+    /*Radius*/
+    --size-border-radius: 50%;
+  }
+
+  /*Universal tags*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+  }
+  
+  body {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    font-size: var(--font-regular);
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-close-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+    color: var(--color-grey);
+  }
+
+
+  /* fade-in, out */
+.fade-class {
+  position: relative;
+  left: 200px;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+}
+
+
+/*header*/
+#header{
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e5;
+  background: no-repeat url(img/systemheader.png) ;
+}
+.header__wrap{
+  max-width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title{
+  padding-top: 100px;
+  font-size: var(--font-smalllarge);
+  color: white;
+}
+.header__nav{
+  margin-top: 80px;
+  height: 55px;
+  line-height: 55px;
+  display: flex;
+}
+.header__menu{
+  border: 1px solid #e1e1e5;
+  background-color: white;
+  flex-grow: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header__menu a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.subactive{
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+}
+.subactiveA{
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+.header__menu:hover {
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+
+
+/*공통된 title과 description*/
+.sub__title{
+  text-align: center;
+  padding-top: 100px;
+}
+.sub__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*주요실적 보기 버튼*/
+.reference__btn{
+    display: block;
+    color: white;
+    cursor: pointer;
+    background: #1462ff;
+    border-radius: 10px;
+    box-shadow: 0 6px 30px -10px #4a74c9;
+    width: 220px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: var(--font-semi-regular);
+    margin-top: 50px;
+    position: relative;
+    text-indent: -10px;
+  }
+  .reference__btn::after{
+    content: ">";
+    font-size: var(--font-semi-regular);
+    font-weight: var(--weight-bold);
+    color: white;
+    position: absolute;
+    right: 30px;
+  }
+  
+  .reference__btn:hover{
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /*빌당안내 시스템 소개*/
+  #eInformation{
+    height: 650px;
+  }
+
+  .eInformation__img{
+    margin-top: 20px;
+  }
+  .eInformation__paragraph{
+    color: white;
+    text-align: center;
+    margin-top: -265px;
+  }
+  .eInformation__paragraph span{
+    font-weight: var(--weight-bold);
+    color: white;
+  }
+
+  /*빌딩안내 시스템 구성*/
+  #eConfiguration{
+    height: 1000px;
+    background-color: #f3f3f8;
+  }
+    #eConfiguration h1{
+    padding-top: 150px;
+    }
+
+  .eConfiguration__img{
+    display: block;
+    width: 1000px;
+    height: 544px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .sub__paragraph{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /*빌딩안내 주요기기*/
+  #eInstrument{
+    height: 1000px;
+  }
+
+  #eInstrument h1{
+    padding-top: 150px;
+  }
+  .eInstrument__container{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 500px;
+  }
+  .eInstrument__item{
+    outline: 1px solid #cdcdcd;
+    width: 100%;
+    margin: 20px;
+    position: relative;
+  }
+  .eInstrument__title{
+    background-color: #5f5f79;
+    color: white;
+    position: absolute;
+    top: -10px;
+    width: 310px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 21px;
+    font-weight: var(--weight-semi-bold);
+  }
+
+  .eInstrument___img{
+    display: block;
+    width: 170px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  /*안에있는 ul*/
+  .eInstrument__smallContainer{
+    width: 280px;
+    height: 155px;
+    background-color: #f4f3f9;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .eInstrument__smallitem{
+    width: 210px;
+    list-style-type: disc;
+    margin: 0 auto;
+    padding-left: 5px;
+  }
+  .eInstrument__smallContainer li:nth-child(1){
+    padding-top: 23px;
+  }
+
+  /*에너지현황 콘텐츠 예시*/
+  #eContents{
+    height: 1080px;
+    margin: 0 auto;
+    max-width: 1400px;
+    position: relative;
+    /*outline: 1px solid red;*/
+  }
+  
+  .eContents__window{
+    overflow: hidden;  /*check out container's movement : command + */
+    position: relative;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 1234px; 
+    height: 680px;
+    left: 50%;
+    top: 50px;
+  }
+  
+  .eContents__container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  /*가로형 이미지*/
+  .eContents__item{
+    float: left;
+    width: 520px;
+    height: 680px;
+    margin: 10px;
+  }
+
+  .eContents__title{
+    width: 520px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #c3d6f4;
+    border: 2px solid #4286f5;
+    border-radius: 10px;
+    color: #0065e9;
+    font-size: var(--font-medium);
+    font-weight: var(--weight-bold);
+  }
+
+  .eContents__wimgs{
+  }
+  .eContents__wimg{
+    display: block;
+    width: 100%;
+    height: 290px;
+    line-height: 290px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid rgb(196, 196, 196);
+  }
+
+  /*세로형 이미지*/
+
+  .eContents__item2{
+    float: left;
+    width: 674px;
+    height: 680px;
+    margin: 10px;
+  }
+  
+  .eContents__title2{
+    width: 674px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #c3d6f4;
+    border: 2px solid #4286f5;
+    border-radius: 10px;
+    color: #0065e9;
+    font-size: var(--font-medium);
+    font-weight: var(--weight-bold);
+  }
+
+  .eContents__himgs{
+    display: flex;
+  }
+  .eContents__himg{
+    display: block;
+    width: 100%;
+    height: 590px;
+    line-height: 590px;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid rgb(196, 196, 196);
+  }
+
+  .eContents__himgs img:first-child{
+    margin-right: 5px;
+  }
+  .eContents__himgs img:first-child+img{
+    margin-left: 5px;
+  }
+
+
+
+/*controler*/
+
+/*이전버튼*/
+.before__btn{
+    position: absolute;
+    top: 560px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    background-image:url(img/before_btn.png);
+  }
+  .before__btn em{
+    display: none;
+  }
+  
+  /*이후버튼*/
+  .after__btn{
+    position: absolute;
+    top: 560px;
+    right: -60px;
+    width: 40px;
+    height: 40px;
+    background-image:url(img/after_btn.png);
+  }
+  .after__btn em{
+    display: none;
+  }
+  

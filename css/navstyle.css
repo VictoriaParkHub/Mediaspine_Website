@@ -164,10 +164,9 @@
 }
 
 .nav__menu__item:hover #mainmenu{
-  border-bottom:1px solid #0065e9;
+  border-bottom:2px solid #0065e9;
   color: #0065e9 !important;
   font-weight: var(--weight-bold);
-  transition: all 0.3s;
 }
 
 /*서브 메뉴*/

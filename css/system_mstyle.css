@@ -133,7 +133,7 @@
   height: 300px;
   width: 100%;
   border-bottom: 1px solid #e1e1e5;
-  background: no-repeat url(img/solutionheader.png) ;
+  background: no-repeat url(img/systemheader.png) ;
 }
 .header__wrap{
   max-width: 1400px;
@@ -224,210 +224,164 @@
     transition: all 0.2s ease-in-out;
   }
 
-  
-  /*DID 시스템 소개*/
-  #didInformation{
+  /*통합 모니터링 시스템 소개*/
+  #mInformation{
     height: 650px;
   }
 
-  .didInformation__img{
+  .mInformation__img{
     margin-top: 20px;
   }
-  .didInformation__paragraph{
+  .mInformation__paragraph{
     color: white;
     text-align: center;
     margin-top: -265px;
   }
-  .didInformation__paragraph span{
+  .mInformation__paragraph span{
     font-weight: var(--weight-bold);
     color: white;
   }
 
-  /*DID PLUS 솔루션 기능*/
-  #didFunction{
+  /*통합 모니터링 시스템 구성*/
+  #mConfiguration{
     background-color: #f3f3f8;
     height: 1000px;
   }
-  #didFunction h1{
+    #mConfiguration h1{
+    padding-top: 150px;
+    }
+
+  .mConfiguration__img{
+    display: block;
+    width: 1000px;
+    height: 544px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .sub__paragraph{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /*통합 모니터링 주요기기*/
+  #mInstrument{
+    height: 1000px;
+  }
+
+  #mInstrument h1{
     padding-top: 150px;
   }
-  .didFunction__container{
-      display: flex;
-      max-width: 1400px;
-      margin: 0 auto;
-      margin-top: 30px;
+  .mInstrument__container{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 500px;
   }
-  .didFunction__item{
-      width: 100%;
-      margin: 20px;
-      position: relative;
-      border-top: 3px solid #bfbfd1;
+  .mInstrument__item{
+    outline: 1px solid #cdcdcd;
+    width: 100%;
+    margin: 20px;
+    position: relative;
   }
-  .didFunction__title{
-      font-size: var(--font-medium);
-      font-weight: var(--weight-bold);
-      padding-left: 50px;
-      padding-top: 50px;
-  }
-  .didFunction__title::before{
-    content: "";
-    display: block;
-    width: 33px;
-    height: 33px;
-    background: no-repeat center url(img/meetFeatureIcon.png);
+  .mInstrument__title{
+    background-color: #5f5f79;
+    color: white;
     position: absolute;
-    left: 0;
-    top: 52px;
+    top: -10px;
+    width: 310px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 21px;
+    font-weight: var(--weight-semi-bold);
   }
 
-  .didFunction__description{
-      padding-left: 50px;
-      padding-top: 20px;
-      padding-bottom: 50px;
+  .mInstrument___img{
+    display: block;
+    width: 170px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    object-fit: contain;
   }
-  .didFunction__img{
-      display: block;
-      height: 300px;
-      line-height: 300px;
-      text-align: center;
+
+  /*안에있는 ul*/
+  .mInstrument__smallContainer{
+    width: 280px;
+    height: 155px;
+    background-color: #f4f3f9;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .mInstrument__smallitem{
+    width: 210px;
+    list-style-type: disc;
+    margin: 0 auto;
+    padding-left: 5px;
+  }
+  .mInstrument__smallContainer li:nth-child(1){
+    padding-top: 23px;
   }
 
 
-  /*DID PLUS 솔루션 특징*/
-#didFeatures{
-  height: 1000px;
-}
-#didFeatures h1{
-  padding-top: 200px;
-}
-
-#didFeatures2{
+  /*통합모니터링 시스템 주요 기기 비교*/
+#mCompare{
   height: 1000px;
   background-color: #f3f3f8;
 }
-#didFeatures2 h1{
-  padding-top: 200px;
+#mCompare h1{
+  padding-top: 130px;
 }
-
-.didFeatures__container{
+.mCompare__container{
+  display: flex;
   max-width: 1400px;
   margin: 0 auto;
   margin-top: 30px;
-  display: flex;
-}
-.didFeatures__left{
-  width: 550px;
-  height: 410px;
-  background: no-repeat center url(img/didFeatureLeft.png);
-}
-.didFeatures__left2{
-  width: 550px;
-  height: 410px;
-  background: no-repeat center url(img/didFeatureLeft2.png);
   position: relative;
 }
-
-/*good sticker*/
-.didFeatures__left2::after{
-  content: "";
-  display: block;
-  width: 82px;
-  height: 82px;
-  background-image: url(img/good.png);
-  position: absolute;
-  top: -40px;
-  left: -40px;
-  /*outline: 1px solid red;*/
-}
-
-/*left2안에 들어가는 글귀*/
-.didFeatures__leftdescription{
-  text-align: center;
-  padding-top: 350px;
-  color: #000000;
-}
-
-.didFeatures__leftdescription span{
-  color: #0065e9;
-  font-weight: var(--weight-bold);
-}
-
-
-.didFeatures__right{
-}
-.didFeatures__item{
-  border: 1px solid #cdcdcd;
-  width: 800px;
-  height: 130px;
-  margin-left: 35px;
-  margin-bottom: 10px;
-  display: flex;
-  background-color: white;
-}
-/*이미지*/
-.didFeatures__img{
-  display: block;
-  width: 90px;
-  height: 90px;
-  margin-top: 20px;
-  margin-left: 100px;
-  margin-right: 70px;
-  text-align: center;
-  line-height: 83px;
-  font-size: var(--font-small);
-  object-fit: cover;
-}
-/*텍스트*/
-.didFeatures__title{
-  font-size: var(--font-semi-regular);
-  font-weight: var(--weight-bold);
-  padding-top: 20px;
-}
-.didFetures__description{
-  padding-top: 10px;
-}
-
-/*DID 솔루션 기능 비교*/
-#didCompare{
-  height: 1000px;
-  padding-top: 50px;
-  /*이건 어쩔 수 없이 h1이 아닌 section에 padding값 넣었음.*/
-}
-.didCompare__container{
-  display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-  margin-top: 10px;
-  position: relative;
-}
-.didCompare__left{
+.mCompare__left{
   width: 100%;
   margin-right: 15px;
 }
 
-.didCompare__right{
+.mCompare__right{
   width: 100%;
   margin-left: 15px;
 }
 
-/*DID PLUS 로컬*/
-.didCompareleft__title{
+/*IP 월 컨트롤러*/
+.mCompareleft__title{
   border-bottom: 4px solid black;
   height: 100px;
-  line-height: 100px;
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   text-align: center;
+  padding-top: 20px;
+  line-height: 25px;
 }
-.didCompareleft__title span{
+.mCompareleft__title span{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+}
+.mCompareleft__title em{
+  font-weight: var(--color-blue);
   color: #0065e9;
+  font-style: normal;
 }
-.didCompareleft__container{
+.mCompareleft__container{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.didCompareleft__item{
+.mCompareleft__item{
   color: #5e5e5e;
   width: 47%;
   border-bottom: 1px solid #cfcfcf;
@@ -437,7 +391,7 @@
   position: relative;
   font-size: var(--font-semi-regular);
 }
-.didCompareleft__item::after{
+.mCompareleft__item::after{
   content: "";
   width: 40px;
   height: 40px;
@@ -446,33 +400,43 @@
   top: 12px;
   background: no-repeat center url(img/didcomparelefticon.png);
 }
-.didCompareleft__img{
+.mCompareleft__img{
   display: block;
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
 
 
-/*DID PLUS 웹*/
-.didCompareright__title{
+/*멀티 월 컨트롤러*/
+.mCompareright__title{
   border-bottom: 4px solid black;
   height: 100px;
-  line-height: 100px;
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   text-align: center;
+  padding-top: 20px;
+  line-height: 25px;
 }
-.didCompareright__title span{
-  color: #229985;
+.mCompareright__title span{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
 }
-.didCompareright__container{
+.mCompareright__title em{
+  font-weight: var(--color-blue);
+  color: #15b99d;
+  font-style: normal;
+}
+.mCompareright__container{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.didCompareright__item{
+.mCompareright__item{
   color: #5e5e5e;
   width: 47%;
   border-bottom: 1px solid #cfcfcf;
@@ -482,7 +446,7 @@
   position: relative;
   font-size: var(--font-semi-regular);
 }
-.didCompareright__item::after{
+.mCompareright__item::after{
   content: "";
   width: 40px;
   height: 40px;
@@ -491,41 +455,87 @@
   top: 12px;
   background: no-repeat center url(img/didcomparerighticon.png);
 }
-.didCompareright__img{
+.mCompareright__img{
   display: block;
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
 }
 
-/*하드웨어 권장사양*/
-.didCompare__hard{
-  outline: 1px solid #cdcdcd;
-  margin-top: 10px;
-}
-.didComparehard__title{
-  text-align: center;
-  color: white;
-  font-weight: var(--weight-bold);
-  background-color: #a1a1b4;
-  height: 50px;
-  line-height: 50px;
-}
-.didComparehard__description{
-  height: 80px;
-  line-height: 80px;
-  text-align: center;
-}
-
 /*가운데 sticker*/
-.didCompare__left::after{
+.mCompare__left::after{
   content: "";
   width: 170px;
   height: 170px;
   background: no-repeat center url(img/didcomparemiddleicon.png);
   position: absolute;
-  top: 60%;
+  top: 65%;
   left: 44%;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border-radius: 100px;
+}
+
+
+/*통합 모니터링 시스템 인테리어*/
+#mInterior{
+  height: 1000px;
+  position: relative;
+}
+
+#mInterior h1{
+  padding-top: 130px;
+}
+
+.mInterior__window{
+  overflow: hidden;  /*check out container's movement : command + */
+  position: relative;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  width: 100%; 
+  height: 680px;
+  left: 50%;
+  top: 50px;
+}
+
+.mInterior__container{
+  position: absolute;
+  height: 680px;
+  width: 100%;
+}
+
+.mInterior__item{
+  width: 100%;
+  height: 680px;
+  display: inline-block;
+  margin: 2px;
+}
+
+
+/*mInterior controler*/
+
+
+/*이전버튼*/
+.before__btn{
+  position: absolute;
+  top: 560px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background-image:url(img/before_btn2.png);
+}
+.before__btn em{
+  display: none;
+}
+
+/*이후버튼*/
+.after__btn{
+  position: absolute;
+  top: 560px;
+  right: 100px;
+  width: 100px;
+  height: 100px;
+  background-image:url(img/after_btn2.png);
+}
+.after__btn em{
+  display: none;
 }

@@ -38,11 +38,51 @@
 
   /*Universal tags*/
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-  
+  @font-face { font-family: 'NotoSansKR'; 
+		font-display: auto;
+		font-style: normal;
+		font-weight: 100;
+		src: 	url(img/NotoSansKR-Thin.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+  src: 	url(img/NotoSansKR-Light.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: 	url(img/NotoSansKR-Regular.woff2) format('woff2'), 
+					url(img/NotoSansKR-Regular.woff) format('woff'), 
+					url(img/NotoSansKR-Regular.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal; 
+  font-weight: 500;
+  src: 	url(img/NotoSansKR-Medium.woff2) format('woff2'), 
+					url(img/NotoSansKR-Medium.woff) format('woff'), 
+					url(img/NotoSansKR-Medium.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 700;
+  src: 	url(img/NotoSansKR-Bold.woff2) format('woff2'), 
+        url(img/NotoSansKR-Bold.woff) format('woff'), 
+        url(img/NotoSansKR-Bold.otf) format('opentype'); }
+          
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 900;
+  src: 	url(img/NotoSansKR-Black.otf) format('opentype'); }
+
   * {
     box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'NotoSansKR', sans-serif;
     image-rendering: -webkit-optimize-contrast;
   }
 
@@ -147,8 +187,8 @@
 }
 .header__nav{
   margin-top: 80px;
-  height: 55px;
-  line-height: 55px;
+  height: 54px;
+  line-height: 53px;
   display: flex;
 }
 .header__menu{
@@ -445,7 +485,7 @@ div.dsDivide__wrap div:nth-child(2) div{
   position: relative;
   transform: translateY(-50%);
   transform: translateX(-50%);
-  width: 1390px;
+  width: 73%;
   height: 440px;
   left: 36%;
   top: 80px;
@@ -454,10 +494,8 @@ div.dsDivide__wrap div:nth-child(2) div{
 .dsContent__container{
   position: absolute;
   height: 440px;
-  width: 1390px;
 }
 .dsContent__item{
-  width: 440px;
   height: 440px;
   display: inline-block;
   margin: 10px;
@@ -465,7 +503,6 @@ div.dsDivide__wrap div:nth-child(2) div{
 
 .dsContent__img{
   display: block;
-  width: 440px;
   height: 330px;
   line-height: 330px;
   text-align: center;
@@ -506,7 +543,7 @@ div.dsDivide__wrap div:nth-child(2) div{
   display: none;
 }
 
-/*주요실적 보기 버튼*/
+/*주요실적 보기 버튼
 .reference__btn{
   display: block;
   color: white;
@@ -534,5 +571,5 @@ div.dsDivide__wrap div:nth-child(2) div{
 .reference__btn:hover{
   border-radius: 50px;
   transition: all 0.2s ease-in-out;
-}
+}*/
 

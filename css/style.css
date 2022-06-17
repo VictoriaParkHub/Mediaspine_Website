@@ -35,13 +35,53 @@
     --size-border-radius: 50%;
   }
 
-  /*Universal tags*/
+   /*Universal tags*/
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-  
+   @font-face { font-family: 'NotoSansKR'; 
+		font-display: auto;
+		font-style: normal;
+		font-weight: 100;
+		src: 	url(img/NotoSansKR-Thin.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+  src: 	url(img/NotoSansKR-Light.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: 	url(img/NotoSansKR-Regular.woff2) format('woff2'), 
+					url(img/NotoSansKR-Regular.woff) format('woff'), 
+					url(img/NotoSansKR-Regular.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal; 
+  font-weight: 500;
+  src: 	url(img/NotoSansKR-Medium.woff2) format('woff2'), 
+					url(img/NotoSansKR-Medium.woff) format('woff'), 
+					url(img/NotoSansKR-Medium.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 700;
+  src: 	url(img/NotoSansKR-Bold.woff2) format('woff2'), 
+        url(img/NotoSansKR-Bold.woff) format('woff'), 
+        url(img/NotoSansKR-Bold.otf) format('opentype'); }
+          
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 900;
+  src: 	url(img/NotoSansKR-Black.otf) format('opentype'); }
+
   * {
     box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'NotoSansKR', sans-serif;
     image-rendering: -webkit-optimize-contrast;
   }
 

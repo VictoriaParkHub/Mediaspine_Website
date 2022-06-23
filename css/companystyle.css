@@ -1,0 +1,446 @@
+/*Global*/
+:root {
+    /*Color*/
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #5e5e5e;
+    --color-light-grey: #7c7979;
+    --color-blue: #0065e9;
+    --color-skyblue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /*Font-size*/
+    --font-biglarge:60px;
+    --font-smalllarge:45px;
+    --font-large: 35px;
+    --font-medium: 25px;
+    --font-semi-regular: 20px;
+    --font-regular: 17px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  
+    /*Font-weight*/
+    --weight-bold: 700;
+    --weight-close-bold: 600;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+    --weight-thin: 200;
+  
+    /*Radius*/
+    --size-border-radius: 50%;
+  }
+
+   /*Universal tags*/
+
+   @font-face { font-family: 'NotoSansKR'; 
+		font-display: auto;
+		font-style: normal;
+		font-weight: 100;
+		src: 	url(img/NotoSansKR-Thin.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+  src: 	url(img/NotoSansKR-Light.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: 	url(img/NotoSansKR-Regular.woff2) format('woff2'), 
+					url(img/NotoSansKR-Regular.woff) format('woff'), 
+					url(img/NotoSansKR-Regular.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal; 
+  font-weight: 500;
+  src: 	url(img/NotoSansKR-Medium.woff2) format('woff2'), 
+					url(img/NotoSansKR-Medium.woff) format('woff'), 
+					url(img/NotoSansKR-Medium.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 700;
+  src: 	url(img/NotoSansKR-Bold.woff2) format('woff2'), 
+        url(img/NotoSansKR-Bold.woff) format('woff'), 
+        url(img/NotoSansKR-Bold.otf) format('opentype'); }
+          
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 900;
+  src: 	url(img/NotoSansKR-Black.otf) format('opentype'); }
+
+  * {
+    box-sizing: border-box;
+    font-family: 'NotoSansKR', sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      position: relative;
+  }
+  
+  body {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    font-size: var(--font-regular);
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-close-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+    color: var(--color-grey);
+  }
+
+
+  /* fade-in, out */
+.fade-class {
+  left: 200px;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+}
+
+
+/*header*/
+#header{
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e5;
+  background: no-repeat url(img/companyheader.png) ;
+}
+.header__wrap{
+  max-width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title{
+  padding-top: 100px;
+  font-size: var(--font-smalllarge);
+  color: white;
+}
+.header__nav{
+  margin-top: 80px;
+  height: 54px;
+  line-height: 53px;
+  display: flex;
+}
+.header__menu{
+  border: 1px solid #e1e1e5;
+  background-color: white;
+  flex-grow: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header__menu a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.subactive{
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+}
+.subactiveA{
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+.header__menu:hover {
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+
+
+/*공통된 title과 description*/
+.sub__title{
+  text-align: center;
+  padding-top: 100px;
+}
+.sub__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sub__title2{
+    text-align: left;
+    padding-top: 20px;
+  }
+  .sub__description2{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+    color: var(--color-grey);
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+/*인사말*/
+#greetings{
+    height: 650px;
+    overflow: hidden;
+}
+.greetings__container{
+    display: flex;
+    margin-top: 100px;
+}
+.greetings__img{
+    display: block;
+    width: 50%;
+    height: 450px;
+    line-height: 450px;
+    text-align: center;
+    object-fit: cover;
+}
+.greetings__titlecontainer{
+    padding-left: 45px;
+}
+.greetings__signcontainer{
+    margin-top: 20px;
+    text-align: right;
+    position: relative;
+}
+.greetings__paragraph2{
+    margin-right: 50px;
+}
+.greetings__sign{
+    display: block;
+    width: 262px;
+    height: 137px;
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    z-index: -999;
+}
+
+/*회사 연혁*/
+#history{
+    height: 1000px;
+    background-color: #f3f3f8;
+}
+.history__container{
+    max-width: 1550px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.history__item{
+    width: 100%;
+}
+.history__year{
+    width: 154px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-weight: var(--weight-bold);
+    font-size: var(--font-semi-regular);
+}
+.history__img{
+    display: block;
+    width: 307px;
+    height: 266px;
+    margin-top: 20px;
+}
+.history__smallcontainer{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.history__smallitem{
+    list-style-type: disc;
+}
+
+/*회사 인증서*/
+#certification{
+    height: 1000px;
+    outline: 1px solid red;
+}
+.certification__container{
+    display: flex;
+    outline: 1px solid red;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: center;
+}
+.certification__item{
+    outline: 1px solid red;
+    width: 100%;
+    margin: 20px;
+}
+.certification__img{
+    display: block;
+    width: 100%;
+    height: 401px;
+    line-height: 401px;
+    outline: 1px solid red;
+}
+.certification__title{
+    outline: 1px solid red;
+    font-weight: var(--weight-bold);
+    margin-top: 20px;
+}
+.certification__description{
+    outline: 1px solid red;
+}
+
+/*협력사*/
+#customers{
+    height: 1000px;
+    background-color: #f3f3f8;
+}
+
+.customers__window{
+    overflow: hidden;  /*check out container's movement : command + */
+    position: relative;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 1365px; 
+    height: 520px;
+    left: 50%;
+    top: 50px;
+}
+.customers__container{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    height: 520px;
+    width: 1365px;
+}
+.customers__item{
+    margin: 20px;
+}
+.customers__img{
+    display: block;
+    width: 233px;
+    height: 133px;
+}
+
+/*이전버튼*/
+.before__btn{
+  position: absolute;
+  top: 560px;
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  background-image:url(img/before_btn.png);
+}
+.before__btn em{
+  display: none;
+}
+
+/*이후버튼*/
+.after__btn{
+  position: absolute;
+  top: 560px;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  background-image:url(img/after_btn.png);
+}
+.after__btn em{
+  display: none;
+}
+
+
+
+
+/*오시는 길*/
+#location{
+    height: 1000px;
+}
+.location__address{
+    text-align: center;
+    margin-top: 20px;
+}
+.address__btn{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/*지도*/
+#map{
+    width: 100%;
+    max-width: 1400px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

@@ -91,6 +91,7 @@
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
+      position: relative;
   }
   
   body {
@@ -155,7 +156,6 @@
 
   /* fade-in, out */
 .fade-class {
-  position: relative;
   left: 200px;
   opacity: 0;
   transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
@@ -164,6 +164,7 @@
   transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
   left: 0px;
   opacity: 1;
+  position: relative;
 }
 
 

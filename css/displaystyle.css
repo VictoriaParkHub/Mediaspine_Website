@@ -508,6 +508,7 @@ div.dsDivide__wrap div:nth-child(2) div{
   height: 330px;
   line-height: 330px;
   text-align: center;
+  border: 1px solid #d4d4d4;
 }
 .dsContent__title{
   margin-top: 20px;

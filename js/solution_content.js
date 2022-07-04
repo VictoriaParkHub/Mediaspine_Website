@@ -1,3 +1,6 @@
+"use strict";
+
+
 //reference 01
 
 const container = document.querySelector(".cNewscontents__container");

@@ -283,9 +283,19 @@
     width: 262px;
     height: 137px;
     position: absolute;
-    top: -50px;
-    right: -100px;
+    top: 0px;
+    right: -45px;
     z-index: -999;
+}
+.greetings__paragraph2::after{
+  display: block;
+  content: " ";
+  width: 255px;
+  height: 1px;
+  background-color: #bdbdbd;
+  position: absolute;
+  top: 80px;
+  right: -45px;
 }
 
 /*회사 연혁*/

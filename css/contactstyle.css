@@ -1,0 +1,420 @@
+/*Global*/
+:root {
+    /*Color*/
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #5e5e5e;
+    --color-light-grey: #7c7979;
+    --color-blue: #0065e9;
+    --color-skyblue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /*Font-size*/
+    --font-biglarge:60px;
+    --font-smalllarge:45px;
+    --font-large: 35px;
+    --font-medium: 25px;
+    --font-semi-regular: 20px;
+    --font-regular: 17px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  
+    /*Font-weight*/
+    --weight-bold: 700;
+    --weight-close-bold: 600;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+    --weight-thin: 200;
+  
+    /*Radius*/
+    --size-border-radius: 50%;
+  }
+
+  /*Universal tags*/
+
+  @font-face { font-family: 'NotoSansKR'; 
+		font-display: auto;
+		font-style: normal;
+		font-weight: 100;
+		src: 	url(img/NotoSansKR-Thin.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+  src: 	url(img/NotoSansKR-Light.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: 	url(img/NotoSansKR-Regular.woff2) format('woff2'), 
+					url(img/NotoSansKR-Regular.woff) format('woff'), 
+					url(img/NotoSansKR-Regular.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal; 
+  font-weight: 500;
+  src: 	url(img/NotoSansKR-Medium.woff2) format('woff2'), 
+					url(img/NotoSansKR-Medium.woff) format('woff'), 
+					url(img/NotoSansKR-Medium.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 700;
+  src: 	url(img/NotoSansKR-Bold.woff2) format('woff2'), 
+        url(img/NotoSansKR-Bold.woff) format('woff'), 
+        url(img/NotoSansKR-Bold.otf) format('opentype'); }
+          
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 900;
+  src: 	url(img/NotoSansKR-Black.otf) format('opentype'); }
+
+  * {
+    box-sizing: border-box;
+    font-family: 'NotoSansKR', sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+    font-style: normal;
+  }
+
+  html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      position: relative;
+  }
+  
+  body {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: var(--weight-regular);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    font-size: var(--font-regular);
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-close-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+    color: var(--color-grey);
+  }
+
+
+  /* fade-in, out */
+.fade-class {
+  left: 200px;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+}
+
+
+/*header*/
+#header{
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e5;
+  background: no-repeat url(img/displayheader.png) ;
+  overflow: hidden;
+}
+.header__wrap{
+  max-width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title{
+  padding-top:120px;
+  font-size: var(--font-smalllarge);
+  color: white;
+}
+.header__nav{
+  margin-top: 80px;
+  height: 54px;
+  line-height: 53px;
+  display: flex;
+}
+.header__menu{
+  border: 1px solid #e1e1e5;
+  background-color: white;
+  flex-grow: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header__menu a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.subactive{
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+}
+.subactiveA{
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+.header__menu:hover {
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+
+
+/*공통된 title과 description*/
+.sub__title{
+  text-align: center;
+  padding-top: 100px;
+}
+.sub__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+/*개인정보처리방침*/
+
+.agree{
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.agree__title{
+  padding: 10px;
+  padding-left: 0px;
+  font-size: var(--font-semi-regular);
+  font-weight: var(--weight-bold);
+}
+
+.agree__description{
+  max-width: 1400px;
+  margin: 0 auto;
+  border: 1px solid #bdbdbd;
+  height: 160px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+
+.agree__description01{
+  font-style: normal;
+}
+
+.agree__text{
+  padding-top: 10px;
+  letter-spacing: -0.3px;
+  color: #868686;
+  font-style: normal;
+  display: flex;
+}
+
+.agree__text input{
+  cursor: pointer;
+}
+
+.agree__text label{
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+
+/*form 부분*/
+.form-elements2{
+  max-width: 1400px;
+  margin: 0 auto;
+  font-style: normal;
+  padding: 20px;
+  padding-bottom: 0px;
+}
+
+/*문의유형*/
+.form__container{
+  display: flex;
+}
+.form__title{
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+}
+.form__description{
+  width: 100%;
+  height: 50px !important;
+  font-weight: var(--weight-thin);
+  color: #979797;
+}
+
+.text{
+  height: 300px !important;
+}
+
+.form__category{
+  display: flex;
+}
+.category{
+  vertical-align: middle;
+  text-align: left;
+  display: inline-block !important;
+  width: 15px;
+  height: 15px;
+}
+
+.form__category label{
+  padding: 10px;
+  font-weight: var(--weight-regular);
+}
+
+/*문의하기 버튼 */
+.contact__btn{
+  display: block;
+  color: white;
+  cursor: pointer;
+  background: #1462ff;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px -10px #4a74c9;
+  width: 220px;
+  height: 60px;
+  margin: 0 auto;
+  font-size: var(--font-semi-regular);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  text-indent: -10px;
+}
+.contact__btn::after{
+  content: ">";
+  font-size: var(--font-semi-regular);
+  font-weight: var(--weight-bold);
+  color: white;
+  position: absolute;
+  right: 30px;
+}
+
+.contact__btn:hover{
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+/*감사인사*/
+
+.modal{
+  width: 100%;
+  height:100vh;
+  background-color: #000000a6;
+  top: 0px;
+  position: fixed;
+  /*display: none;*/
+}
+.modal__window{
+  outline: 1px solid #0065e9;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  background-color: white;
+  padding: 100px;
+}
+.modal__content{
+  text-align: center;
+}
+
+.modal__content span{
+  font-size: 16px;
+  font-weight: var(--weight-regular);
+}
+
+/*모달창 닫기버튼*/
+.close__btn{
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  background-color: #0065e9;
+  display: block;
+  z-index: 999;
+  top: 0px;
+  right: 0px;
+}
+.close__btn img{
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  object-fit: contain;
+}

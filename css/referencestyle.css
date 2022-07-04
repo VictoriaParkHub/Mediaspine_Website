@@ -1,0 +1,520 @@
+/*Global*/
+:root {
+    /*Color*/
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #fe918d;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #5e5e5e;
+    --color-light-grey: #7c7979;
+    --color-blue: #0065e9;
+    --color-skyblue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+
+    /*Color2*/
+    --color2-kiosk : #ea4235;
+    --color2-building : #4286f5;
+    --color2-energy : #34a853;
+    --color2-monitor : #8a8d92;
+    --color2-conference : #fabc05;
+  
+    /*Font-size*/
+    --font-biglarge:60px;
+    --font-smalllarge:45px;
+    --font-large: 35px;
+    --font-medium: 25px;
+    --font-semi-regular: 20px;
+    --font-regular: 17px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  
+    /*Font-weight*/
+    --weight-bold: 700;
+    --weight-close-bold: 600;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+    --weight-thin: 200;
+  
+    /*Radius*/
+    --size-border-radius: 50%;
+  }
+
+  /*Universal tags*/
+
+  @font-face { font-family: 'NotoSansKR'; 
+		font-display: auto;
+		font-style: normal;
+		font-weight: 100;
+		src: 	url(img/NotoSansKR-Thin.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 200;
+  src: 	url(img/NotoSansKR-Light.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: 	url(img/NotoSansKR-Regular.woff2) format('woff2'), 
+					url(img/NotoSansKR-Regular.woff) format('woff'), 
+					url(img/NotoSansKR-Regular.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: normal; 
+  font-weight: 500;
+  src: 	url(img/NotoSansKR-Medium.woff2) format('woff2'), 
+					url(img/NotoSansKR-Medium.woff) format('woff'), 
+					url(img/NotoSansKR-Medium.otf) format('opentype'); }
+
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 700;
+  src: 	url(img/NotoSansKR-Bold.woff2) format('woff2'), 
+        url(img/NotoSansKR-Bold.woff) format('woff'), 
+        url(img/NotoSansKR-Bold.otf) format('opentype'); }
+          
+  @font-face { font-family: 'NotoSansKR'; 
+  font-display: auto;
+  font-style: bold; 
+  font-weight: 900;
+  src: 	url(img/NotoSansKR-Black.otf) format('opentype'); }
+
+  * {
+    box-sizing: border-box;
+    font-family: 'NotoSansKR', sans-serif;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+  html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      position: relative;
+  }
+  
+  body {
+    cursor: default;
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+    font-size: var(--font-regular);
+  }
+  
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: var(--font-medium);
+    font-weight: var(--weight-close-bold);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  h3 {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+  }
+  
+  p {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 0;
+    color: var(--color-grey);
+  }
+
+
+  /* fade-in, out */
+.fade-class {
+  left: 200px;
+  opacity: 0;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+}
+.fade-in {
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s linear;
+  left: 0px;
+  opacity: 1;
+  position: relative;
+}
+
+
+/*header*/
+#header{
+  height: 300px;
+  width: 100%;
+  border-bottom: 1px solid #e1e1e5;
+  background: no-repeat url(img/systemheader.png) ;
+}
+.header__wrap{
+  max-width: 1400px;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__title{
+  padding-top: 100px;
+  font-size: var(--font-smalllarge);
+  color: white;
+}
+.header__nav{
+  margin-top: 80px;
+  height: 54px;
+  line-height: 53px;
+  display: flex;
+}
+.header__menu{
+  border: 1px solid #e1e1e5;
+  background-color: white;
+  flex-grow: 1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.header__menu a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.subactive{
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+}
+.subactiveA{
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+.header__menu:hover {
+  background-color: #eef8ff;
+  border: 1px solid #3086f6;
+  color: #3086f6;
+  font-weight: var(--weight-bold);
+}
+
+
+/*공통된 title과 description*/
+.sub__title{
+  text-align: center;
+  padding-top: 100px;
+}
+.sub__description{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 0;
+  color: var(--color-grey);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*자세히보기 버튼 스타일*/
+.more__btn{
+    width: 130px;
+    height: 20px;
+    position: relative;
+    font-size: var(--font-small);
+    /*outline: 1px solid pink;*/
+    padding-left: 20px;
+  }
+  
+  .more__btn a::after{
+    content: "";
+    background-image: url(img/arrow.png);
+    width: 46px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .more__btn span{
+    color: var(--color-blue);
+  }
+  
+
+  /*구축실적*/
+#sreference{
+    margin: 0 auto;
+    max-width: 1400px;
+    position: relative;
+    height: 2300px;
+  }
+  
+  .sreference__window{
+    overflow: hidden;  /*check out container's movement : command + */
+    position: relative;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 1240px;
+    height: 1770px;
+    left: 50%;
+    top: 110px;
+    border-top: 3px solid var(--color-black);
+  }
+  
+  .sreference__container{
+    position: absolute;
+    width: 1400px;
+    height: 1770px;
+  }
+  
+  .sreference__item{
+    display: inline-block;
+    margin: 2px;
+    border: 1px solid #bdbdbd;
+    width: 26.5%;
+    height: 400px;
+    margin: 20px;
+  }
+  .sreference__item img{
+    display: block;
+    width: 100%;
+    height: 200px;
+  }
+
+  .sreference__item__title1, .sreference__item__title2,
+  .sreference__item__title3, .sreference__item__title4,
+  .sreference__item__title5{
+    font-size: 17px;
+    padding: 20px;
+    text-indent: 25px;
+    position: relative;
+  }
+
+  /*키오스크*/
+  .sreference__item__title1::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    background-color:var(--color2-kiosk);
+    top: 20px;
+  }
+  /*빌딩안내*/
+  .sreference__item__title2::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    background-color:var(--color2-building);
+    top: 20px;
+  }
+  /*회의예약안내*/
+  .sreference__item__title3::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    background-color: var(--color2-conference);
+    top: 20px;
+  }
+  /*에너지현황디스플레이*/
+  .sreference__item__title4::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    background-color: var(--color2-energy);
+    top: 20px;
+  }
+  /*통합모니터링*/
+  .sreference__item__title5::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    border-radius: 10px;
+    display: block;
+    background-color: var(--color2-monitor);
+    top: 20px;
+  }
+
+  .sreference__item__name{
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 23px;
+  }
+
+  .sreference__item__description{
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
+  
+/*이전버튼*/
+.before__btn{
+    position: absolute;
+    bottom: 7%;
+    left: 45%;
+    width: 30px;
+    height: 30px;
+    background: url(img/before_btn.png);
+    background-size: contain;
+  }
+  .before__btn em{
+    display: none;
+  }
+  
+  /*이후버튼*/
+  .after__btn{
+    position: absolute;
+    bottom: 7%;
+    right: 45%;
+    width: 30px;
+    height: 30px;
+    background: url(img/after_btn.png);
+    background-size: contain;
+  }
+  .after__btn em{
+    display: none;
+  }
+
+  /*number*/
+  .number{
+    position: absolute;
+    bottom: 7.1%;
+    left: 47%;
+    width: 80px;
+    text-align: center; 
+  }
+  .number a{
+    width: 23px;
+    display: inline-block;
+  }
+
+  .numberactive{
+    color: #0065e9;
+    font-weight: var(--weight-bold);
+  }
+
+
+  .modal{
+    width: 100%;
+    height:100vh;
+    background-color: #000000a6;
+    position: fixed;
+    top: 0;
+    display: none;
+  }
+  .modal__window{
+    outline: 1px solid red;
+    width: 70%;
+    height: 80%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    top: 110px;
+    background-color: white;
+  }
+  .modal__content{
+    width: 80%;
+    height: 50%;
+    outline: 1px solid red;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+/*모달창 닫기버튼*/
+.close__btn{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    display: block;
+    z-index: 999;
+    top: 110px;
+    right: 15%;
+    display: none;
+  }
+
+  /*modal창*/
+  .back02{
+    display: none;
+  }
+  .back03{
+    display: none;
+  }
+  .back04{
+    display: none;
+  }
+  .back05{
+    display: none;
+  }
+  .back06{
+    display: none;
+  }
+  .back07{
+    display: none;
+  }
+  .back08{
+    display: none;
+  }
+  .back09{
+    display: none;
+  }
+  .back10{
+    display: none;
+  }
+  .back11{
+    display: none;
+  }
+  .back12{
+    display: none;
+  }
+
+
+  /*scontainer*/
+  .scontainer01{
+    display: block;
+  }
+  .scontainer02{
+    display: none;
+  }
+  .scontainer03{
+    display: none;
+  }

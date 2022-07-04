@@ -1,3 +1,5 @@
+"use strict";
+
 //scrolling 변수
 const nav = document.querySelector("#nav");
 const headerHeight = nav.getBoundingClientRect().height;

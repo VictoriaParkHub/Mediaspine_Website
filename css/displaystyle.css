@@ -494,8 +494,9 @@ div.dsDivide__wrap div:nth-child(2) div{
   margin: 0 auto;
 }
 .dsContent__container{
-  position: absolute;
   height: 440px;
+  margin: 0 auto;
+  text-align: center;
 }
 .dsContent__item{
   height: 440px;
@@ -524,7 +525,7 @@ div.dsDivide__wrap div:nth-child(2) div{
 .before__btn{
   position: absolute;
   top: 500px;
-  left: 130px;
+  left: 10%;
   width: 40px;
   height: 40px;
   background-image:url(img/before_btn.png);
@@ -537,7 +538,7 @@ div.dsDivide__wrap div:nth-child(2) div{
 .after__btn{
   position: absolute;
   top: 500px;
-  right: 130px;
+  right: 10%;
   width: 40px;
   height: 40px;
   background-image:url(img/after_btn.png);

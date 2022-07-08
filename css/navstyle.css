@@ -95,7 +95,6 @@
   body {
     cursor: default;
     font-family: "Open Sans", sans-serif;
-    overflow-x: hidden;
   }
   
   a {
@@ -331,3 +330,24 @@
   background: no-repeat url(img/top_btnhover.png);
   color: #7fc41c;
 }
+
+
+/*toggle button
+.navbar__toggle-btn{
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  width: 60px;
+  height: 50px;
+  outline: 1px solid rgb(199, 199, 199);
+  background-color: #fff;
+  border-radius: 5px;
+
+}
+.navbar__toggle-btn img{
+  margin-top: 1px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+*/

@@ -21,6 +21,7 @@
     --color2-energy : #34a853;
     --color2-monitor : #8a8d92;
     --color2-conference : #fabc05;
+    --color2-check : #a6a346;
   
     /*Font-size*/
     --font-biglarge:60px;
@@ -310,7 +311,7 @@
 
   .sreference__item__title1, .sreference__item__title2,
   .sreference__item__title3, .sreference__item__title4,
-  .sreference__item__title5{
+  .sreference__item__title5,  .sreference__item__title6{
     font-size: 17px;
     padding: 20px;
     text-indent: 25px;
@@ -373,6 +374,18 @@
     top: 20px;
   }
 
+/*재부재*/
+.sreference__item__title6::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  border-radius: 10px;
+  display: block;
+  background-color: var(--color2-check);
+  top: 20px;
+}
+
   .sreference__item__name{
     padding-top: 5px;
     padding-left: 20px;
@@ -418,7 +431,7 @@
     position: absolute;
     bottom: 7.1%;
     left: 47%;
-    width: 80px;
+    width: 105px;
     text-align: center; 
   }
   .number a{
@@ -516,5 +529,8 @@
     display: none;
   }
   .scontainer03{
+    display: none;
+  }
+  .scontainer04{
     display: none;
   }
